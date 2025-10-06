@@ -3,6 +3,8 @@ from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
 from django.contrib import messages
 from django import forms
+from django.forms.widgets import SelectDateWidget
+from django.utils import timezone
 from .models import (User, Student, Teacher, Admin, Department, AcademicYear, 
                     Subject, ExamType, StudentMarks, SemesterResult, StudentCGPA)
 from django.db import models  # for isinstance checks if needed
@@ -13,11 +15,42 @@ class DepartmentAdmin(admin.ModelAdmin):
     list_filter = ['is_active', 'established_date']
     search_fields = ['name', 'code', 'description']
 
+    # Use a year dropdown for established_date (past dates)
+    class DepartmentForm(forms.ModelForm):
+        class Meta:
+            model = Department
+            fields = '__all__'
+            # Show last 150 years in descending order
+            widgets = {
+                'established_date': SelectDateWidget(
+                    years=range(timezone.now().year, timezone.now().year - 150, -1)
+                )
+            }
+
+    form = DepartmentForm
+
 @admin.register(AcademicYear)
 class AcademicYearAdmin(admin.ModelAdmin):
     list_display = ['year', 'start_date', 'end_date', 'is_current', 'is_active']
     list_filter = ['is_current', 'is_active']
     search_fields = ['year']
+    
+    # Use a convenient year selector for academic year dates
+    class AcademicYearForm(forms.ModelForm):
+        class Meta:
+            model = AcademicYear
+            fields = '__all__'
+            widgets = {
+                # Allow a wider planning window (past 10 years to next 5 years)
+                'start_date': SelectDateWidget(
+                    years=range(timezone.now().year + 5, timezone.now().year - 10, -1)
+                ),
+                'end_date': SelectDateWidget(
+                    years=range(timezone.now().year + 5, timezone.now().year - 10, -1)
+                ),
+            }
+
+    form = AcademicYearForm
 
 # @admin.register(Student)
 # class StudentAdmin(admin.ModelAdmin):
@@ -104,6 +137,24 @@ class StudentAdmin(admin.ModelAdmin):
     autocomplete_fields = ['department', 'academic_year']
     readonly_fields = ['student_id']  # keep auto-generated id immutable
     
+    # Replace date_of_birth calendar with dropdown selects including a year selector
+    class StudentForm(forms.ModelForm):
+        class Meta:
+            model = Student
+            fields = '__all__'
+            widgets = {
+                # Show last 120 years for DOB (descending so recent years appear first)
+                'date_of_birth': SelectDateWidget(
+                    years=range(timezone.now().year, timezone.now().year - 120, -1)
+                ),
+                # Graduation can also be a past date; allow last 50 years and next 10 (for planned graduation)
+                'graduation_date': SelectDateWidget(
+                    years=range(timezone.now().year + 10, timezone.now().year - 50, -1)
+                )
+            }
+
+    form = StudentForm
+    
     def has_add_permission(self, request):
         # Teachers and admins can add students
         if hasattr(request.user, 'user_type'):
@@ -157,6 +208,14 @@ class TeacherAdmin(admin.ModelAdmin):
     list_filter = ['department', 'designation', 'is_active']
     search_fields = ['teacher_id', 'first_name', 'last_name', 'email']
     readonly_fields = ['teacher_id']  # keep auto-generated id immutable
+
+    # Hide face enrollment datetime from admin UI
+    class TeacherForm(forms.ModelForm):
+        class Meta:
+            model = Teacher
+            fields = '__all__'
+
+    form = TeacherForm
 
     def save_model(self, request, obj, form, change):
         # Ensure teacher_id exists or (re)generate if missing

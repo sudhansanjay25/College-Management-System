@@ -1,5 +1,8 @@
 # attendance/admin.py
 from django.contrib import admin
+from django import forms
+from django.forms.widgets import SelectDateWidget
+from django.utils import timezone
 from .models import Subject, SubjectTeacher, SubjectEnrollment, ClassSchedule, AttendanceSession, Attendance
 
 @admin.register(Subject)
@@ -20,6 +23,19 @@ class AttendanceSessionAdmin(admin.ModelAdmin):
     list_filter = ['date', 'session_type', 'is_completed']
     search_fields = ['subject__name', 'teacher__first_name']
     readonly_fields = ['created_at', 'completed_at']
+
+    class AttendanceSessionForm(forms.ModelForm):
+        class Meta:
+            model = AttendanceSession
+            fields = '__all__'
+            widgets = {
+                # Allow easy selection for sessions across past year and next year
+                'date': SelectDateWidget(
+                    years=range(timezone.now().year + 1, timezone.now().year - 1, -1)
+                )
+            }
+
+    form = AttendanceSessionForm
 
 @admin.register(Attendance)
 class AttendanceAdmin(admin.ModelAdmin):

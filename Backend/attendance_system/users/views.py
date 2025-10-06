@@ -104,13 +104,13 @@ def upload_face_encoding(request):
         if user_type == 'student':
             student = get_object_or_404(Student, student_id=user_id)
             student.face_encoding = face_encoding.tobytes()
-            student.face_enrollment_date = timezone.now()
-            student.save()
+            # No longer track face enrollment date/time
+            student.save(update_fields=['face_encoding'])
         elif user_type == 'teacher':
             teacher = get_object_or_404(Teacher, teacher_id=user_id)
             teacher.face_encoding = face_encoding.tobytes()
-            teacher.face_enrollment_date = timezone.now()
-            teacher.save()
+            # No longer track face enrollment date/time
+            teacher.save(update_fields=['face_encoding'])
         
         return Response({'message': 'Face encoding saved successfully'}, status=status.HTTP_200_OK)
         

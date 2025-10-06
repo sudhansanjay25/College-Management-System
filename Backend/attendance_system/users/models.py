@@ -70,7 +70,6 @@ class Student(models.Model):
     
     # Face Recognition
     face_encoding = models.BinaryField(blank=True, null=True)
-    face_enrollment_date = models.DateTimeField(blank=True, null=True)
     profile_picture = models.ImageField(upload_to='student_profiles/', blank=True, null=True)
     
     class Meta:
@@ -104,7 +103,6 @@ class Teacher(models.Model):
     
     # Face Recognition
     face_encoding = models.BinaryField(blank=True, null=True)
-    face_enrollment_date = models.DateTimeField(blank=True, null=True)
     profile_picture = models.ImageField(upload_to='teacher_profiles/', blank=True, null=True)
 
     def __str__(self):
