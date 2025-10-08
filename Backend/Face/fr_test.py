@@ -79,7 +79,23 @@ class HaarFaceDetector:
     def detect(self, frame):
         gray = ensure_gray(frame)
         faces = self.cascade.detectMultiScale(gray, scaleFactor=1.1, minNeighbors=5, minSize=(60, 60))
-        return faces.tolist() if len(faces) > 0 else []
+        # Normalize return to list of [x, y, w, h]
+        try:
+            if isinstance(faces, np.ndarray):
+                if faces.size == 0:
+                    return []
+                return faces.astype(int).tolist()
+            # Some OpenCV builds may return tuples/lists
+            if hasattr(faces, '__len__'):
+                if len(faces) == 0:
+                    return []
+                return [list(map(int, r)) for r in faces]
+        except TypeError:
+            # Guard against unexpected scalar returns
+            return []
+        except Exception:
+            return []
+        return []
 
 
 class ORBEncoder:
@@ -457,16 +473,36 @@ class FaceRecognitionSystem:
         if self.yolo is not None:
             results = self.yolo(frame, verbose=False)[0]
             for box in results.boxes:
-                conf = float(box.conf.cpu().numpy())
+                # Safely extract scalar confidence to avoid NumPy deprecation warnings
+                try:
+                    conf_tensor = getattr(box, 'conf', None)
+                    conf = float(conf_tensor.item()) if conf_tensor is not None else 0.0
+                except Exception:
+                    conf = 0.0
                 if conf < 0.4:
                     continue
-                x1, y1, x2, y2 = box.xyxy.cpu().numpy()[0]
-                detections.append([int(x1), int(y1), int(x2-x1), int(y2-y1)])
+                # Safely extract coordinates regardless of tensor/ndarray shape
+                try:
+                    xyxy = box.xyxy
+                    if hasattr(xyxy, 'cpu'):
+                        xyxy = xyxy.cpu().numpy()
+                    xyxy = np.array(xyxy).reshape(-1, 4)[0].tolist()
+                    x1, y1, x2, y2 = [int(v) for v in xyxy]
+                except Exception:
+                    continue
+                detections.append([x1, y1, int(x2 - x1), int(y2 - y1)])
         return detections
     
     def detect_faces_opencv(self, frame):
         """Detect faces using Haar cascade."""
-        return self.detector.detect(frame)
+        try:
+            return self.detector.detect(frame)
+        except TypeError:
+            # e.g., if underlying cascade returns an unexpected scalar
+            return []
+        except Exception as e:
+            print(f"Detect error (OpenCV Haar): {e}")
+            return []
     
     def recognize_face(self, face_image_bgr):
         """Recognize a single face crop by comparing with known embeddings.
@@ -493,7 +529,10 @@ class FaceRecognitionSystem:
             best_dist = 1.0
             for name, known_list in self.known_embeddings.items():
                 try:
-                    distances = face_recognition.face_distance(known_list, face_encoding)
+                    known_arr = np.asarray(known_list)
+                    if known_arr.ndim == 1:
+                        known_arr = known_arr.reshape(1, -1)
+                    distances = face_recognition.face_distance(known_arr, face_encoding)
                     if len(distances) == 0:
                         continue
                     d = float(np.min(distances))
@@ -640,6 +679,15 @@ class FaceRecognitionSystem:
     def run_webcam(self, camera_index=0, video_path: Optional[str] = None):
         """Run real-time recognition on webcam"""
         cap = cv2.VideoCapture(video_path if video_path else camera_index)
+        # On Windows, fallback to DirectShow if default backend fails
+        if not cap.isOpened():
+            cap.release()
+            try:
+                cap = cv2.VideoCapture(video_path if video_path else camera_index, cv2.CAP_DSHOW)
+            except Exception:
+                pass
+        if not cap.isOpened(): 
+            raise RuntimeError("Could not open camera/video source. Try a different index (0/1) or close other apps using the camera.")
         cap.set(cv2.CAP_PROP_FRAME_WIDTH, 640)
         cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 480)
         
@@ -693,7 +741,8 @@ class FaceRecognitionSystem:
                 break
             elif key == ord('s'):
                 filename = f"capture_{int(time.time())}.jpg"
-                cv2.imwrite(filename, frame)
+                to_save = display_frame if display_frame is not None else frame
+                cv2.imwrite(filename, to_save)
                 print(f"✓ Frame saved as {filename}")
             elif key == ord('r'):
                 self.load_known_faces()
