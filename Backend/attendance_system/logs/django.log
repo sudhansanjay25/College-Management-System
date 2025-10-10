@@ -2401,3 +2401,4 @@ INFO 2025-10-07 15:57:35,415 basehttp 1764 1732 "GET /api-auth/login/?next=/api/
 INFO 2025-10-07 15:58:04,781 basehttp 1764 1732 "POST /api-auth/login/ HTTP/1.1" 302 0
 WARNING 2025-10-07 15:58:04,791 log 1764 1732 Unauthorized: /api/users/students/
 WARNING 2025-10-07 15:58:04,792 basehttp 1764 1732 "GET /api/users/students/ HTTP/1.1" 401 10000
+INFO 2025-10-10 09:04:10,007 autoreload 22912 14520 Watching for file changes with StatReloader
