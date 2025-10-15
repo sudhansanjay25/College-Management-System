@@ -13,6 +13,7 @@ import insightface
 from insightface.app import FaceAnalysis
 from datetime import datetime
 import json
+import time
 
 class InsightFaceAttendanceSystem:
     def __init__(self, 
@@ -29,12 +30,12 @@ class InsightFaceAttendanceSystem:
         """
         print("🚀 Initializing InsightFace...")
         
-        # Initialize InsightFace
+        # Initialize InsightFace with balanced model for accuracy
         self.app = FaceAnalysis(
-            name='buffalo_l',  # buffalo_l is the most accurate model
+            name='buffalo_l',  # buffalo_l is more accurate than buffalo_s
             providers=['CPUExecutionProvider']  # Use GPU if available: ['CUDAExecutionProvider', 'CPUExecutionProvider']
         )
-        self.app.prepare(ctx_id=0, det_size=(640, 640))
+        self.app.prepare(ctx_id=0, det_size=(640, 640))  # Larger detection size for better accuracy
         
         self.enrollment_folder = enrollment_folder
         self.data_file = data_file
@@ -48,7 +49,8 @@ class InsightFaceAttendanceSystem:
         }
         
         print("✅ InsightFace initialized successfully!")
-        print(f"   Model: buffalo_l (ArcFace)")
+        print(f"   Model: buffalo_l (High Accuracy)")
+        print(f"   Detection size: 640x640 (optimized for accuracy)")
         print(f"   Threshold: {threshold}")
     
     def get_face_embedding(self, image):
@@ -102,10 +104,12 @@ class InsightFaceAttendanceSystem:
             
             print(f"\n👤 Processing: {person_name}")
             
-            # Get all image files
-            image_files = []
-            for ext in ['*.jpg', '*.jpeg', '*.png', '*.JPG', '*.JPEG', '*.PNG']:
-                image_files.extend(person_folder.glob(ext))
+            # Get all image files (use set to avoid duplicates from case-insensitive filesystem)
+            image_files = set()
+            for ext in ['*.jpg', '*.jpeg', '*.png']:
+                image_files.update(person_folder.glob(ext))
+            # Convert back to list and sort for consistent processing order
+            image_files = sorted(list(image_files))
             
             if not image_files:
                 print(f"   ⚠️ No images found for {person_name}")
@@ -228,9 +232,9 @@ class InsightFaceAttendanceSystem:
         print("   - Press 't' to adjust threshold")
         
         # Open webcam
-        cap = cv2.VideoCapture(0, cv2.CAP_MSMF)
+        cap = cv2.VideoCapture(2, cv2.CAP_MSMF)
         if not cap.isOpened():
-            cap = cv2.VideoCapture(0)
+            cap = cv2.VideoCapture(2)
         
         if not cap.isOpened():
             print("❌ Cannot open camera")
@@ -244,8 +248,13 @@ class InsightFaceAttendanceSystem:
         attendance_log = {}
         
         frame_count = 0
-        process_every_n_frames = 3  # Process every 3rd frame for performance
+        process_every_n_frames = 3  # Back to 3 frames since we optimized the model
         last_results = []
+        
+        # Performance monitoring
+        fps_start_time = time.time()
+        fps_frame_count = 0
+        processing_times = []
         
         try:
             while True:
@@ -259,13 +268,22 @@ class InsightFaceAttendanceSystem:
                 
                 # Process face recognition
                 if frame_count % process_every_n_frames == 0:
-                    # Get all faces in frame
-                    faces = self.app.get(frame)
+                    start_time = time.time()
+                    
+                    # Use larger frame for processing (better accuracy)
+                    small_frame = cv2.resize(frame, (640, 480))
+                    # Get all faces in smaller frame
+                    faces = self.app.get(small_frame)
                     last_results = []
+                    
+                    # Scale factor to map back to original frame
+                    scale_x = frame.shape[1] / small_frame.shape[1]
+                    scale_y = frame.shape[0] / small_frame.shape[0]
                     
                     for face in faces:
                         embedding = face.embedding
-                        bbox = face.bbox.astype(int)
+                        # Scale bbox back to original frame size
+                        bbox = (face.bbox * [scale_x, scale_y, scale_x, scale_y]).astype(int)
                         
                         # Calculate similarity with database
                         if self.face_database['embeddings']:
@@ -285,7 +303,15 @@ class InsightFaceAttendanceSystem:
                                 name = "Unknown"
                                 person_id = None
                             
+                            # Debug: Print recognition details (comment out if too verbose)
+                            if frame_count % (process_every_n_frames * 10) == 0:  # Print every 10 processed frames
+                                print(f"Face detected - Best match: {self.face_database['names'][best_match_idx]} ({confidence:.1f}%), Threshold: {self.threshold:.2f}")
+                            
                             last_results.append((name, person_id, confidence, bbox))
+                    
+                    # Record processing time
+                    process_time = (time.time() - start_time) * 1000  # Convert to ms
+                    processing_times.append(process_time)
                 
                 # Draw results
                 for name, person_id, confidence, bbox in last_results:
@@ -309,10 +335,23 @@ class InsightFaceAttendanceSystem:
                     cv2.putText(frame, label, (x1 + 6, y2 - 6),
                               cv2.FONT_HERSHEY_DUPLEX, 0.6, (255, 255, 255), 1)
                 
-                # Display info
-                info_text = f"Threshold: {self.threshold:.2f} | Known: {len(self.face_database['names'])} | Detected: {len(last_results)}"
+                # Calculate and display FPS
+                fps_frame_count += 1
+                current_time = time.time()
+                elapsed_time = current_time - fps_start_time
+                
+                if elapsed_time > 1.0:  # Update FPS every second
+                    current_fps = fps_frame_count / elapsed_time
+                    fps_start_time = current_time
+                    fps_frame_count = 0
+                else:
+                    current_fps = fps_frame_count / max(elapsed_time, 0.001)
+                
+                # Display info with FPS and processing time
+                avg_process_time = np.mean(processing_times[-10:]) if processing_times else 0
+                info_text = f"FPS: {current_fps:.1f} | Process: {avg_process_time:.1f}ms | Threshold: {self.threshold:.2f} | Detected: {len(last_results)}"
                 cv2.putText(frame, info_text, (10, 30),
-                           cv2.FONT_HERSHEY_SIMPLEX, 0.6, (255, 255, 255), 2)
+                           cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 2)
                 
                 # Show frame
                 cv2.imshow('InsightFace Attendance System', frame)
@@ -375,7 +414,7 @@ def main():
     system = InsightFaceAttendanceSystem(
         enrollment_folder='enrollment_images',
         data_file='face_data/face_database.pkl',
-        threshold=0.45  # Adjust based on your needs (0.4-0.5 recommended)
+        threshold=0.35  # Lower threshold for better recognition (0.3-0.4 recommended)
     )
     
     while True:

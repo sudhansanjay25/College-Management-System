@@ -2,202 +2,202 @@
   "Sanjay Nithin": [
     {
       "source_file": "enrollment_images\\Sanjay Nithin\\1.jpg",
-      "face_location": [
+      "bbox": [
+        889,
         2117,
-        2270,
-        3497,
-        889
+        1381,
+        1380
       ]
     },
     {
       "source_file": "enrollment_images\\Sanjay Nithin\\2.jpg",
-      "face_location": [
+      "bbox": [
+        1196,
         2117,
-        2576,
-        3497,
-        1196
+        1380,
+        1380
       ]
     },
     {
       "source_file": "enrollment_images\\Sanjay Nithin\\3.jpg",
-      "face_location": [
+      "bbox": [
+        583,
         1963,
-        1963,
-        3343,
-        583
+        1380,
+        1380
       ]
     },
     {
       "source_file": "enrollment_images\\Sanjay Nithin\\4.jpg",
-      "face_location": [
+      "bbox": [
+        583,
         1810,
-        1963,
-        3190,
-        583
+        1380,
+        1380
       ]
     },
     {
       "source_file": "enrollment_images\\Sanjay Nithin\\5.jpg",
-      "face_location": [
+      "bbox": [
+        1196,
         1963,
-        2576,
-        3343,
-        1196
+        1380,
+        1380
       ]
     },
     {
       "source_file": "enrollment_images\\Sanjay Nithin\\1.jpg",
-      "face_location": [
+      "bbox": [
+        889,
         2117,
-        2270,
-        3497,
-        889
+        1381,
+        1380
       ]
     },
     {
       "source_file": "enrollment_images\\Sanjay Nithin\\2.jpg",
-      "face_location": [
+      "bbox": [
+        1196,
         2117,
-        2576,
-        3497,
-        1196
+        1380,
+        1380
       ]
     },
     {
       "source_file": "enrollment_images\\Sanjay Nithin\\3.jpg",
-      "face_location": [
+      "bbox": [
+        583,
         1963,
-        1963,
-        3343,
-        583
+        1380,
+        1380
       ]
     },
     {
       "source_file": "enrollment_images\\Sanjay Nithin\\4.jpg",
-      "face_location": [
+      "bbox": [
+        583,
         1810,
-        1963,
-        3190,
-        583
+        1380,
+        1380
       ]
     },
     {
       "source_file": "enrollment_images\\Sanjay Nithin\\5.jpg",
-      "face_location": [
+      "bbox": [
+        1196,
         1963,
-        2576,
-        3343,
-        1196
+        1380,
+        1380
       ]
     }
   ],
   "Sudhan Sanjay": [
     {
       "source_file": "enrollment_images\\Sudhan Sanjay\\1.jpg",
-      "face_location": [
+      "bbox": [
+        1196,
         2117,
-        2576,
-        3497,
-        1196
+        1380,
+        1380
       ]
     },
     {
       "source_file": "enrollment_images\\Sudhan Sanjay\\2.jpg",
-      "face_location": [
+      "bbox": [
+        889,
         1963,
-        2270,
-        3343,
-        889
+        1381,
+        1380
       ]
     },
     {
       "source_file": "enrollment_images\\Sudhan Sanjay\\3.jpg",
-      "face_location": [
+      "bbox": [
+        1349,
         1963,
-        2730,
-        3343,
-        1349
+        1381,
+        1380
       ]
     },
     {
       "source_file": "enrollment_images\\Sudhan Sanjay\\4.jpg",
-      "face_location": [
+      "bbox": [
+        1252,
         1891,
-        2402,
-        3042,
-        1252
+        1150,
+        1151
       ]
     },
     {
       "source_file": "enrollment_images\\Sudhan Sanjay\\5.jpg",
-      "face_location": [
+      "bbox": [
+        1196,
         2117,
-        2576,
-        3497,
-        1196
+        1380,
+        1380
       ]
     },
     {
       "source_file": "enrollment_images\\Sudhan Sanjay\\6.jpg",
-      "face_location": [
+      "bbox": [
+        1043,
         2423,
-        2423,
-        3804,
-        1043
+        1380,
+        1381
       ]
     },
     {
       "source_file": "enrollment_images\\Sudhan Sanjay\\1.jpg",
-      "face_location": [
+      "bbox": [
+        1196,
         2117,
-        2576,
-        3497,
-        1196
+        1380,
+        1380
       ]
     },
     {
       "source_file": "enrollment_images\\Sudhan Sanjay\\2.jpg",
-      "face_location": [
+      "bbox": [
+        889,
         1963,
-        2270,
-        3343,
-        889
+        1381,
+        1380
       ]
     },
     {
       "source_file": "enrollment_images\\Sudhan Sanjay\\3.jpg",
-      "face_location": [
+      "bbox": [
+        1349,
         1963,
-        2730,
-        3343,
-        1349
+        1381,
+        1380
       ]
     },
     {
       "source_file": "enrollment_images\\Sudhan Sanjay\\4.jpg",
-      "face_location": [
+      "bbox": [
+        1252,
         1891,
-        2402,
-        3042,
-        1252
+        1150,
+        1151
       ]
     },
     {
       "source_file": "enrollment_images\\Sudhan Sanjay\\5.jpg",
-      "face_location": [
+      "bbox": [
+        1196,
         2117,
-        2576,
-        3497,
-        1196
+        1380,
+        1380
       ]
     },
     {
       "source_file": "enrollment_images\\Sudhan Sanjay\\6.jpg",
-      "face_location": [
+      "bbox": [
+        1043,
         2423,
-        2423,
-        3804,
-        1043
+        1380,
+        1381
       ]
     }
   ]

@@ -35,6 +35,7 @@ from pathlib import Path
 from typing import Dict, List, Tuple, Optional
 import time
 from collections import defaultdict
+import traceback
 
 # Core libraries (required)
 try:
@@ -67,6 +68,34 @@ except ImportError:
 
 def ensure_gray(img):
     return cv2.cvtColor(img, cv2.COLOR_BGR2GRAY) if len(img.shape) == 3 else img
+
+
+def nms_boxes(detections: List[List[int]], iou_thresh: float = 0.45) -> List[List[int]]:
+    """Non-Maximum Suppression for [x,y,w,h,conf] boxes.
+    Returns filtered detections in the same format.
+    """
+    if not detections:
+        return []
+    boxes = np.array([[d[0], d[1], d[0] + d[2], d[1] + d[3]] for d in detections], dtype=float)
+    scores = np.array([d[4] if len(d) > 4 else 0.9 for d in detections], dtype=float)
+    order = scores.argsort()[::-1]
+    keep = []
+    while order.size > 0:
+        i = order[0]
+        keep.append(i)
+        xx1 = np.maximum(boxes[i, 0], boxes[order[1:], 0])
+        yy1 = np.maximum(boxes[i, 1], boxes[order[1:], 1])
+        xx2 = np.minimum(boxes[i, 2], boxes[order[1:], 2])
+        yy2 = np.minimum(boxes[i, 3], boxes[order[1:], 3])
+        w = np.maximum(0.0, xx2 - xx1)
+        h = np.maximum(0.0, yy2 - yy1)
+        inter = w * h
+        area_i = (boxes[i, 2] - boxes[i, 0]) * (boxes[i, 3] - boxes[i, 1])
+        area_rest = (boxes[order[1:], 2] - boxes[order[1:], 0]) * (boxes[order[1:], 3] - boxes[order[1:], 1])
+        iou = inter / (area_i + area_rest - inter + 1e-6)
+        inds = np.where(iou <= iou_thresh)[0]
+        order = order[inds + 1]
+    return [detections[i] for i in keep]
 
 
 class HaarFaceDetector:
@@ -110,6 +139,20 @@ class ORBEncoder:
 
     def encode(self, face_bgr) -> Optional[np.ndarray]:
         gray = ensure_gray(face_bgr)
+        # Normalize contrast to improve keypoint detection
+        try:
+            gray = cv2.equalizeHist(gray)
+        except Exception:
+            pass
+        # Resize to a consistent size to stabilize descriptor count
+        try:
+            h, w = gray.shape[:2]
+            if min(h, w) > 0:
+                scale = 160 / max(h, w)
+                if scale != 1.0:
+                    gray = cv2.resize(gray, (int(w*scale), int(h*scale)))
+        except Exception:
+            pass
         kps, des = self.orb.detectAndCompute(gray, None)
         return des  # shape (N, 32) uint8 or None
 
@@ -127,12 +170,16 @@ class ORBEncoder:
             # k-NN matches
             matches = self.matcher.knnMatch(des_query, des_ref, k=2)
             good = 0
-            for m_n in matches:
-                if len(m_n) != 2:
-                    continue
-                m, n = m_n
-                if m.distance < 0.75 * n.distance:
-                    good += 1
+            try:
+                for m_n in matches:
+                    if not hasattr(m_n, '__len__') or len(m_n) != 2:
+                        continue
+                    m, n = m_n
+                    if m.distance < 0.75 * n.distance:
+                        good += 1
+            except TypeError:
+                # In case matches is not iterable as expected
+                good = 0
             # Normalize by number of keypoints to get a score [0,1]
             denom = max(len(des_query), 1)
             score = min(good / denom, 1.0)
@@ -232,6 +279,7 @@ class EmbeddingGenerator:
             else:
                 dets = detector.detect(img_bgr)
                 if dets:
+                    # Use first detection (Haar has no confidence)
                     face_bbox = dets[0]
 
             if face_bbox is None:
@@ -239,7 +287,14 @@ class EmbeddingGenerator:
                 continue
 
             x, y, w, h = face_bbox
-            face_crop = img_bgr[max(0,y):y+h, max(0,x):x+w]
+            # Expand crop slightly to include full face context
+            mx = int(0.15 * w)
+            my = int(0.20 * h)
+            x0 = max(0, x - mx)
+            y0 = max(0, y - my)
+            x1 = min(img_bgr.shape[1], x + w + mx)
+            y1 = min(img_bgr.shape[0], y + h + my)
+            face_crop = img_bgr[y0:y1, x0:x1]
             if face_crop.size == 0:
                 print(f"  ⚠ Invalid face crop in {img_path.name}")
                 continue
@@ -411,23 +466,72 @@ class FaceRecognitionSystem:
         
         # Initialize detectors based on availability
         self.yolo = None
+        self.yolo_is_face = False
         if HAVE_YOLO:
             try:
-                self.yolo = YOLO('yolov8n.pt')  # Using nano for faster inference
-                print("✓ YOLOv8 initialized")
+                # Prefer a face-specific model if present
+                script_dir = Path(__file__).resolve().parent
+                candidates = [
+                    script_dir / 'yolov8n-face.pt',
+                    script_dir / 'models' / 'yolov8n-face.pt',
+                    self.storage_path / 'models' / 'yolov8n-face.pt',
+                ]
+                face_weight = next((str(p) for p in candidates if p.exists()), None)
+                if face_weight:
+                    self.yolo = YOLO(face_weight)
+                    self.yolo_is_face = True
+                    print(f"✓ YOLOv8 face model loaded: {face_weight}")
+                else:
+                    # Fall back to generic COCO model, but we will not use it for face detection
+                    self.yolo = YOLO('yolov8n.pt')
+                    self.yolo_is_face = False
+                    print("ℹ YOLOv8 COCO model loaded (person). For better face detection, place 'yolov8n-face.pt' in Face/models/")
             except Exception as e:
                 print(f"Failed to initialize YOLO: {e}")
                 self.yolo = None
+                self.yolo_is_face = False
+
+        # Try to initialize OpenCV DNN face detector (ResNet SSD)
+        self.dnn = None
+        try:
+            script_dir = Path(__file__).resolve().parent
+            proto_candidates = [
+                script_dir / 'models' / 'deploy.prototxt',
+                self.storage_path / 'models' / 'deploy.prototxt',
+                script_dir / 'deploy.prototxt',
+            ]
+            model_candidates = [
+                script_dir / 'models' / 'res10_300x300_ssd_iter_140000.caffemodel',
+                self.storage_path / 'models' / 'res10_300x300_ssd_iter_140000.caffemodel',
+                script_dir / 'res10_300x300_ssd_iter_140000.caffemodel',
+            ]
+            proto = next((str(p) for p in proto_candidates if p.exists()), None)
+            model = next((str(p) for p in model_candidates if p.exists()), None)
+            if proto and model:
+                self.dnn = cv2.dnn.readNetFromCaffe(proto, model)
+                # Try to use OpenCL if available for speed
+                try:
+                    self.dnn.setPreferableBackend(cv2.dnn.DNN_BACKEND_OPENCV)
+                    self.dnn.setPreferableTarget(cv2.dnn.DNN_TARGET_OPENCL)
+                except Exception:
+                    try:
+                        self.dnn.setPreferableTarget(cv2.dnn.DNN_TARGET_CPU)
+                    except Exception:                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              =
+                        pass
+                print("✓ OpenCV DNN face detector initialized")
+        except Exception as e:
+            print(f"INFO: DNN face detector not initialized: {e}")
         
         # Initialize tracker
         if HAVE_DEEPSORT:
-            self.tracker = DeepSort(max_age=30, n_init=2, max_iou_distance=0.7)
+            # Slightly stricter IOU to reduce duplicate tracks
+            self.tracker = DeepSort(max_age=30, n_init=3, max_iou_distance=0.5)
             print("✓ DeepSORT tracker initialized")
         else:
             self.tracker = SimpleTracker(max_disappeared=30)
             print("✓ Simple tracker initialized")
-        
-        # Face detector (Haar by default)
+
+        # Face detector (Prefer DNN, then YOLO face, fallback to Haar)
         self.detector = HaarFaceDetector()
 
         # ORB encoder for fallback recognition
@@ -470,7 +574,7 @@ class FaceRecognitionSystem:
         # NOTE: Default YOLOv8 COCO model detects 'person', not 'face'.
         # If you have a face model (e.g., yolov8n-face.pt), place it and change the initializer above.
         detections = []
-        if self.yolo is not None:
+        if self.yolo is not None and self.yolo_is_face:
             results = self.yolo(frame, verbose=False)[0]
             for box in results.boxes:
                 # Safely extract scalar confidence to avoid NumPy deprecation warnings
@@ -490,7 +594,34 @@ class FaceRecognitionSystem:
                     x1, y1, x2, y2 = [int(v) for v in xyxy]
                 except Exception:
                     continue
-                detections.append([x1, y1, int(x2 - x1), int(y2 - y1)])
+                detections.append([x1, y1, int(x2 - x1), int(y2 - y1), conf])
+        return detections
+
+    def detect_faces_dnn(self, frame, conf_thresh: float = 0.6):
+        """Detect faces using OpenCV DNN ResNet SSD."""
+        detections = []
+        if self.dnn is None:
+            return detections
+        h, w = frame.shape[:2]
+        blob = cv2.dnn.blobFromImage(cv2.resize(frame, (300, 300)), 1.0,
+                                     (300, 300), (104.0, 177.0, 123.0))
+        self.dnn.setInput(blob)
+        out = self.dnn.forward()
+        # out shape: [1, 1, N, 7] -> [batch, class, detections, [id, classId, conf, x1, y1, x2, y2]]
+        try:
+            for i in range(out.shape[2]):
+                confidence = float(out[0, 0, i, 2])
+                if confidence < conf_thresh:
+                    continue
+                x1 = int(out[0, 0, i, 3] * w)
+                y1 = int(out[0, 0, i, 4] * h)
+                x2 = int(out[0, 0, i, 5] * w)
+                y2 = int(out[0, 0, i, 6] * h)
+                x1, y1 = max(0, x1), max(0, y1)
+                x2, y2 = min(w - 1, x2), min(h - 1, y2)
+                detections.append([x1, y1, max(0, x2 - x1), max(0, y2 - y1), confidence])
+        except Exception:
+            pass
         return detections
     
     def detect_faces_opencv(self, frame):
@@ -581,18 +712,44 @@ class FaceRecognitionSystem:
         results = []
         height, width = frame.shape[:2]
         
-        # Detect faces/persons
-        if HAVE_YOLO and self.yolo is not None:
+        # Detect faces: prefer DNN > YOLO(face) > Haar
+        if self.dnn is not None:
+            detections = self.detect_faces_dnn(frame)
+        elif HAVE_YOLO and self.yolo is not None and self.yolo_is_face:
             detections = self.detect_faces_yolo(frame)
         else:
-            detections = self.detect_faces_opencv(frame)
+            # Haar: no confidence, assign a modest one
+            raw = self.detect_faces_opencv(frame)
+            detections = [[x, y, w, h, 0.6] for (x, y, w, h) in raw]
+        # Normalize detections to list of [x,y,w,h,conf]
+        norm = []
+        try:
+            if isinstance(detections, (list, tuple, np.ndarray)):
+                for d in detections:
+                    try:
+                        if len(d) == 5:
+                            x, y, w, h, conf = d
+                        else:
+                            x, y, w, h = d
+                            conf = 0.9
+                        norm.append([int(x), int(y), int(w), int(h), float(conf)])
+                    except Exception:
+                        continue
+            else:
+                norm = []
+        except Exception:
+            norm = []
+        # Apply NMS to reduce duplicate boxes
+        detections = nms_boxes(norm, iou_thresh=0.45)
         
         # Update tracker
         if HAVE_DEEPSORT:
             # DeepSORT expects different format
             ds_detections = []
-            for (x, y, w, h) in detections:
-                ds_detections.append([x, y, w, h, 0.9])  # Add confidence
+            for det in detections:
+                x, y, w, h, conf = det if len(det) == 5 else (*det, 0.9)
+                # Format: ([x, y, w, h], confidence, class)
+                ds_detections.append(([int(x), int(y), int(w), int(h)], float(conf), 0))
             
             tracks = self.tracker.update_tracks(ds_detections, frame=frame)
             
@@ -606,7 +763,14 @@ class FaceRecognitionSystem:
                 w, h = int(ltrb[2] - ltrb[0]), int(ltrb[3] - ltrb[1])
                 
                 # Extract face region
-                face_roi = frame[max(0,y):y+h, max(0,x):x+w]
+                # Expand ROI a bit for better recognition stability
+                mx = int(0.12 * w)
+                my = int(0.18 * h)
+                x0 = max(0, x - mx)
+                y0 = max(0, y - my)
+                x1 = min(frame.shape[1], x + w + mx)
+                y1 = min(frame.shape[0], y + h + my)
+                face_roi = frame[y0:y1, x0:x1]
                 if face_roi.size > 0:
                     name, conf = self.recognize_face(face_roi)
                     results.append({
@@ -617,13 +781,20 @@ class FaceRecognitionSystem:
                     })
         else:
             # Simple tracker
-            tracked_objects = self.tracker.update(detections)
+            try:
+                tracked_objects = self.tracker.update(detections)
+            except TypeError:
+                # Guard against wrong detection type
+                tracked_objects = self.tracker.update([])
             
             for obj_id, (x, y, w, h) in tracked_objects.items():
                 # Extract face region
                 face_roi = frame[max(0,y):y+h, max(0,x):x+w]
                 if face_roi.size > 0:
-                    name, conf = self.recognize_face(face_roi)
+                    try:
+                        name, conf = self.recognize_face(face_roi)
+                    except Exception:
+                        name, conf = "Unknown", 0.0
                     results.append({
                         'id': obj_id,
                         'bbox': (x, y, w, h),
@@ -635,7 +806,11 @@ class FaceRecognitionSystem:
     
     def draw_results(self, frame, results, fps):
         """Draw bounding boxes and labels on frame"""
+        if not isinstance(results, (list, tuple)):
+            results = []
         for result in results:
+            if not isinstance(result, dict):
+                continue
             x, y, w, h = result['bbox']
             name = result['name']
             track_id = result['id']
@@ -678,16 +853,39 @@ class FaceRecognitionSystem:
     
     def run_webcam(self, camera_index=0, video_path: Optional[str] = None):
         """Run real-time recognition on webcam"""
-        cap = cv2.VideoCapture(video_path if video_path else camera_index)
-        # On Windows, fallback to DirectShow if default backend fails
-        if not cap.isOpened():
-            cap.release()
-            try:
-                cap = cv2.VideoCapture(video_path if video_path else camera_index, cv2.CAP_DSHOW)
-            except Exception:
-                pass
-        if not cap.isOpened(): 
-            raise RuntimeError("Could not open camera/video source. Try a different index (0/1) or close other apps using the camera.")
+        # If a video file is provided, open it directly
+        if video_path:
+            cap = cv2.VideoCapture(video_path)
+            if not cap.isOpened():
+                raise RuntimeError("Could not open video file. Check the path and try again.")
+            backend_name = "FILE"
+        else:
+            # Probe multiple Windows backends for reliability, similar to fixcamera.py
+            backend_candidates = [
+                ("MSMF", getattr(cv2, 'CAP_MSMF', cv2.CAP_ANY)),
+                ("DSHOW", getattr(cv2, 'CAP_DSHOW', cv2.CAP_ANY)),
+                ("ANY", cv2.CAP_ANY),
+                ("VFW", getattr(cv2, 'CAP_VFW', cv2.CAP_ANY)),
+            ]
+
+            cap = None
+            backend_name = None
+            for name, code in backend_candidates:
+                try:
+                    tmp = cv2.VideoCapture(camera_index, code)
+                    if tmp.isOpened():
+                        # Validate we can read at least one frame
+                        ok, frm = tmp.read()
+                        if ok and frm is not None:
+                            cap = tmp
+                            backend_name = name
+                            break
+                    tmp.release()
+                except Exception:
+                    continue
+
+            if cap is None or not cap.isOpened():
+                raise RuntimeError("Could not open camera. Try a different index (0/1/2) or close other apps using the camera.")
         cap.set(cv2.CAP_PROP_FRAME_WIDTH, 640)
         cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 480)
         
@@ -700,6 +898,8 @@ class FaceRecognitionSystem:
         print("  r - Reload embeddings")
         print("  SPACE - Pause/Resume")
         print("="*50)
+        if not video_path and backend_name:
+            print(f"Using camera backend: {backend_name}")
         
         paused = False
         frame_count = 0
@@ -708,13 +908,18 @@ class FaceRecognitionSystem:
         while True:
             if not paused:
                 ret, frame = cap.read()
-                if not ret:
+                if not ret: 
                     print("Failed to grab frame")
                     break
                 
                 # Process every 2nd frame for better performance
                 if frame_count % 2 == 0:
-                    results = self.process_frame(frame)
+                    try:
+                        results = self.process_frame(frame)
+                    except Exception as e:
+                        print(f"Process frame error: {e}")
+                        traceback.print_exc()
+                        results = []
                     self.last_results = results
                 else:
                     results = getattr(self, 'last_results', [])
@@ -750,7 +955,7 @@ class FaceRecognitionSystem:
             elif key == 32:  # SPACE
                 paused = not paused
                 print("Paused" if paused else "Resumed")
-        
+        print(3)
         cap.release()
         cv2.destroyAllWindows()
 
@@ -810,6 +1015,8 @@ def test_system():
                 system.run_webcam()
             except Exception as e:
                 print(f"\n❌ Error running webcam: {e}")
+                import traceback as _tb
+                _tb.print_exc()
                 print("Make sure your camera is connected and not being used by another application")
         
         elif choice == '3':
