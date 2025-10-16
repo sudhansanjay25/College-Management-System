@@ -77,6 +77,56 @@ class CustomUserAdmin(UserAdmin):
         ('User Type', {'fields': ('user_type',)}),
     )
 
+    def save_model(self, request, obj, form, change):
+        """Ensure Admin profile exists when a user is saved as an admin via Users UI.
+
+        - Promotes admin users to have is_staff/is_superuser.
+        - Creates an Admin row with a unique admin_id if absent.
+        - Keeps Admin profile in sync for name/email changes.
+        """
+        super().save_model(request, obj, form, change)
+
+        from .models import Admin as _Admin
+        # Ensure privilege flags for admin users
+        if getattr(obj, 'user_type', None) == 'admin':
+            updates = []
+            if not obj.is_staff:
+                obj.is_staff = True; updates.append('is_staff')
+            if not obj.is_superuser:
+                obj.is_superuser = True; updates.append('is_superuser')
+            if updates:
+                obj.save(update_fields=updates)
+
+            # Create or sync Admin profile
+            adm = _Admin.objects.filter(user=obj).first()
+            if not adm:
+                admin_id = _next_admin_id()
+                _Admin.objects.create(
+                    user=obj,
+                    admin_id=admin_id,
+                    first_name=obj.first_name or '',
+                    last_name=obj.last_name or '',
+                    email=obj.email or '',
+                    phone_number='',
+                    role='Admin',
+                    permissions={}
+                )
+            else:
+                # Sync profile basics
+                changed = False
+                if adm.first_name != (obj.first_name or ''):
+                    adm.first_name = obj.first_name or ''; changed = True
+                if adm.last_name != (obj.last_name or ''):
+                    adm.last_name = obj.last_name or ''; changed = True
+                if adm.email != (obj.email or ''):
+                    adm.email = obj.email or ''; changed = True
+                if changed:
+                    adm.save(update_fields=['first_name', 'last_name', 'email'])
+        else:
+            # Optionally, if user no longer admin, you can detach Admin profile.
+            # For safety, keep profile unless explicitly requested to delete.
+            pass
+
 # Helpers for ID generation
 def _year_code(academic_year) -> str:
     # Try start_date first
@@ -136,6 +186,8 @@ class StudentAdmin(admin.ModelAdmin):
     search_fields = ['student_id', 'first_name', 'last_name', 'email']
     autocomplete_fields = ['department', 'academic_year']
     readonly_fields = ['student_id']  # keep auto-generated id immutable
+    # Hide the internal OneToOne 'user' from admin UI to avoid confusion
+    exclude = ['user']
     
     # Replace date_of_birth calendar with dropdown selects including a year selector
     class StudentForm(forms.ModelForm):
@@ -156,50 +208,73 @@ class StudentAdmin(admin.ModelAdmin):
     form = StudentForm
     
     def has_add_permission(self, request):
-        # Teachers and admins can add students
+        # Only admins can add students
         if hasattr(request.user, 'user_type'):
-            return request.user.user_type in ['teacher', 'admin']
+            return request.user.user_type == 'admin' or request.user.is_superuser
         return request.user.is_superuser
     
     def has_change_permission(self, request, obj=None):
-        # Teachers and admins can modify students
+        # Only admins can modify students
         if hasattr(request.user, 'user_type'):
-            return request.user.user_type in ['teacher', 'admin']
+            return request.user.user_type == 'admin' or request.user.is_superuser
         return request.user.is_superuser
     
     def has_delete_permission(self, request, obj=None):
-        # Teachers and admins can delete students
+        # Only admins can delete students
         if hasattr(request.user, 'user_type'):
-            return request.user.user_type in ['teacher', 'admin']
+            return request.user.user_type == 'admin' or request.user.is_superuser
         return request.user.is_superuser
 
     def save_model(self, request, obj, form, change):
+        # Ensure Student.user always refers to the student's own login account.
+        # If a non-student user was linked earlier, drop that link so a proper
+        # student user can be created below.
+        if getattr(obj, 'user', None) and getattr(obj.user, 'user_type', None) != 'student':
+            obj.user = None
         # Ensure student_id exists or (re)generate if missing
         if not getattr(obj, 'student_id', None):
             roll = getattr(obj, 'roll_number', None) or getattr(obj, 'rollno', None) or getattr(obj, 'roll', None)
             obj.student_id = _generate_unique_id(Student, "student_id", obj.academic_year, obj.department, roll)
 
-        # Auto-create linked User for new records (or if user not linked)
-        if not change or not getattr(obj, 'user_id', None):
-            if not getattr(obj, 'user', None):
+        # Collision-safe create/link for Student.user
+        desired_username = obj.student_id
+        if not getattr(obj, 'user_id', None):
+            existing = User.objects.filter(username=desired_username).first()
+            if existing:
+                # Reuse only if it's a student account and not already linked to another student
+                if getattr(existing, 'user_type', None) == 'student' and not hasattr(existing, 'student'):
+                    obj.user = existing
+                else:
+                    # Prevent IntegrityError and surface a clear validation message
+                    from django import forms as _forms
+                    messages.error(request, f"Username '{desired_username}' is already used by a {getattr(existing, 'user_type', 'user')} account. Free it or choose a different Student ID.")
+                    raise _forms.ValidationError({'student_id': f"Student ID '{desired_username}' is already in use by another account."})
+            else:
                 user = User.objects.create_user(
-                    username=obj.student_id,
+                    username=desired_username,
                     email=getattr(obj, 'email', '') or '',
                     first_name=getattr(obj, 'first_name', '') or '',
                     last_name=getattr(obj, 'last_name', '') or '',
                     user_type='student',
                     password='student123'
                 )
+                user.is_staff = False
+                user.is_superuser = False
                 user.must_change_password = True
-                user.save(update_fields=['must_change_password'])
+                user.save(update_fields=['is_staff', 'is_superuser', 'must_change_password'])
                 obj.user = user
 
         super().save_model(request, obj, form, change)
 
-        # Keep User.username in sync with the generated student_id
-        if getattr(obj, 'user', None) and obj.user.username != obj.student_id:
-            obj.user.username = obj.student_id
-            obj.user.save(update_fields=['username'])
+        # Keep User.username in sync with the generated student_id (only for student users)
+        if getattr(obj, 'user', None) and getattr(obj.user, 'user_type', None) == 'student' and obj.user.username != obj.student_id:
+            # Check for collision before renaming
+            if User.objects.filter(username=obj.student_id).exclude(pk=obj.user.pk).exists():
+                messages.error(request, f"Cannot change Student ID to '{obj.student_id}' because that username is already taken.")
+                # Do not rename; leave as-is to avoid IntegrityError
+            else:
+                obj.user.username = obj.student_id
+                obj.user.save(update_fields=['username'])
 
 
 @admin.register(Teacher)
@@ -208,6 +283,7 @@ class TeacherAdmin(admin.ModelAdmin):
     list_filter = ['department', 'designation', 'is_active']
     search_fields = ['teacher_id', 'first_name', 'last_name', 'email']
     readonly_fields = ['teacher_id']  # keep auto-generated id immutable
+    exclude = ['user']
 
     # Hide face enrollment datetime from admin UI
     class TeacherForm(forms.ModelForm):
@@ -223,28 +299,62 @@ class TeacherAdmin(admin.ModelAdmin):
             roll = getattr(obj, 'roll_number', None) or getattr(obj, 'rollno', None) or getattr(obj, 'roll', None)
             obj.teacher_id = _generate_unique_id(Teacher, "teacher_id", obj.academic_year if hasattr(obj, 'academic_year') else None, obj.department, roll)
 
-        # Auto-create linked User for new records (or if user not linked)
-        if not change or not getattr(obj, 'user_id', None):
-            if not getattr(obj, 'user', None):
+        # Auto-create/link with collision safety for teachers
+        if getattr(obj, 'user', None) and getattr(obj.user, 'user_type', None) != 'teacher':
+            obj.user = None
+        if not getattr(obj, 'user_id', None):
+            desired_username = obj.teacher_id
+            existing = User.objects.filter(username=desired_username).first()
+            if existing:
+                if getattr(existing, 'user_type', None) == 'teacher' and not hasattr(existing, 'teacher'):
+                    obj.user = existing
+                else:
+                    from django import forms as _forms
+                    messages.error(request, f"Username '{desired_username}' is already used by a {getattr(existing, 'user_type', 'user')} account. Free it or choose a different Teacher ID.")
+                    raise _forms.ValidationError({'teacher_id': f"Teacher ID '{desired_username}' is already in use by another account."})
+            else:
                 user = User.objects.create_user(
-                    username=obj.teacher_id,
+                    username=desired_username,
                     email=getattr(obj, 'email', '') or '',
                     first_name=getattr(obj, 'first_name', '') or '',
                     last_name=getattr(obj, 'last_name', '') or '',
                     user_type='teacher',
-                    password='teacher123',
-                    is_staff=True  # Give teachers staff permissions to access admin
+                    password='teacher123'
                 )
+                # Remove admin access for teachers
+                user.is_staff = False
+                user.is_superuser = False
                 user.must_change_password = True
-                user.save(update_fields=['must_change_password'])
+                user.save(update_fields=['is_staff', 'is_superuser', 'must_change_password'])
                 obj.user = user
 
         super().save_model(request, obj, form, change)
 
-        # Keep User.username in sync with the generated teacher_id
-        if getattr(obj, 'user', None) and obj.user.username != obj.teacher_id:
-            obj.user.username = obj.teacher_id
-            obj.user.save(update_fields=['username'])
+        # Keep User.username in sync with the generated teacher_id (only for teacher users)
+        if getattr(obj, 'user', None) and getattr(obj.user, 'user_type', None) == 'teacher' and obj.user.username != obj.teacher_id:
+            if User.objects.filter(username=obj.teacher_id).exclude(pk=obj.user.pk).exists():
+                messages.error(request, f"Cannot change Teacher ID to '{obj.teacher_id}' because that username is already taken.")
+            else:
+                obj.user.username = obj.teacher_id
+                obj.user.save(update_fields=['username'])
+
+    def has_add_permission(self, request):
+        # Only admins can add teachers
+        if hasattr(request.user, 'user_type'):
+            return request.user.user_type == 'admin' or request.user.is_superuser
+        return request.user.is_superuser
+
+    def has_change_permission(self, request, obj=None):
+        # Only admins can modify teachers
+        if hasattr(request.user, 'user_type'):
+            return request.user.user_type == 'admin' or request.user.is_superuser
+        return request.user.is_superuser
+
+    def has_delete_permission(self, request, obj=None):
+        # Only admins can delete teachers
+        if hasattr(request.user, 'user_type'):
+            return request.user.user_type == 'admin' or request.user.is_superuser
+        return request.user.is_superuser
 
 class AdminForm(forms.ModelForm):
     """Form used when adding / editing Admin objects.

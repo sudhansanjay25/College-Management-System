@@ -2403,3 +2403,1757 @@ WARNING 2025-10-07 15:58:04,791 log 1764 1732 Unauthorized: /api/users/students/
 WARNING 2025-10-07 15:58:04,792 basehttp 1764 1732 "GET /api/users/students/ HTTP/1.1" 401 10000
 INFO 2025-10-10 09:04:10,007 autoreload 22912 14520 Watching for file changes with StatReloader
 INFO 2025-10-11 16:08:49,249 autoreload 4116 10200 Watching for file changes with StatReloader
+INFO 2025-10-15 13:36:24,298 autoreload 960 13808 Watching for file changes with StatReloader
+WARNING 2025-10-15 13:36:33,586 log 960 21696 Not Found: /
+WARNING 2025-10-15 13:36:33,587 basehttp 960 21696 "GET / HTTP/1.1" 404 3505
+WARNING 2025-10-15 13:36:33,738 log 960 21696 Not Found: /favicon.ico
+WARNING 2025-10-15 13:36:33,740 basehttp 960 21696 "GET /favicon.ico HTTP/1.1" 404 3556
+INFO 2025-10-15 13:36:38,335 basehttp 960 21696 "GET /admin/ HTTP/1.1" 302 0
+INFO 2025-10-15 13:36:42,340 basehttp 960 21696 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 3694
+INFO 2025-10-15 13:36:42,378 basehttp 960 21696 "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2025-10-15 13:36:42,387 basehttp 960 21696 "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+INFO 2025-10-15 13:36:42,391 basehttp 960 15640 "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+INFO 2025-10-15 13:36:42,394 basehttp 960 22040 "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+INFO 2025-10-15 13:36:42,395 basehttp 960 7928 "GET /static/admin/css/login.css HTTP/1.1" 304 0
+INFO 2025-10-15 13:36:42,396 basehttp 960 21400 "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO 2025-10-15 13:36:42,403 basehttp 960 21400 "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+INFO 2025-10-15 13:37:15,245 basehttp 960 21400 "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2025-10-15 13:37:17,157 basehttp 960 21400 "GET /admin/ HTTP/1.1" 200 19978
+INFO 2025-10-15 13:37:17,213 basehttp 960 21400 "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+INFO 2025-10-15 13:37:17,214 basehttp 960 7928 "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+INFO 2025-10-15 13:37:17,214 basehttp 960 15640 "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 304 0
+INFO 2025-10-15 13:37:17,215 basehttp 960 22040 "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+INFO 2025-10-15 13:38:03,710 basehttp 960 22040 "GET /admin/users/admin/ HTTP/1.1" 200 17591
+INFO 2025-10-15 13:38:03,755 basehttp 960 22040 "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+INFO 2025-10-15 13:38:03,756 basehttp 960 15640 "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO 2025-10-15 13:38:03,776 basehttp 960 7928 "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO 2025-10-15 13:38:03,776 basehttp 960 21696 "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO 2025-10-15 13:38:03,780 basehttp 960 22040 "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO 2025-10-15 13:38:03,785 basehttp 960 15640 "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO 2025-10-15 13:38:03,788 basehttp 960 2840 "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO 2025-10-15 13:38:03,788 basehttp 960 7928 "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+INFO 2025-10-15 13:38:03,790 basehttp 960 22040 "GET /static/admin/img/search.svg HTTP/1.1" 304 0
+INFO 2025-10-15 13:38:03,792 basehttp 960 21696 "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO 2025-10-15 13:38:03,805 basehttp 960 21696 "GET /static/admin/js/filters.js HTTP/1.1" 304 0
+INFO 2025-10-15 13:38:04,480 basehttp 960 21400 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-10-15 13:38:04,521 basehttp 960 21400 "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+INFO 2025-10-15 13:38:17,739 basehttp 960 21400 "GET /admin/users/student/ HTTP/1.1" 200 21048
+INFO 2025-10-15 13:38:17,801 basehttp 960 21696 "GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+INFO 2025-10-15 13:38:18,153 basehttp 960 21400 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-10-15 13:38:18,201 basehttp 960 21400 "GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 304 0
+INFO 2025-10-15 13:38:34,778 basehttp 960 21400 "GET /admin/users/teacher/ HTTP/1.1" 200 20690
+INFO 2025-10-15 13:38:36,255 basehttp 960 21400 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-10-15 13:41:29,816 basehttp 960 21400 "GET /admin/ HTTP/1.1" 200 19978
+INFO 2025-10-15 13:41:46,072 basehttp 960 3960 "GET /admin/ HTTP/1.1" 302 0
+INFO 2025-10-15 13:41:46,088 basehttp 960 3960 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4177
+INFO 2025-10-15 13:41:46,726 basehttp 960 2864 "GET /static/admin/css/login.css HTTP/1.1" 200 951
+INFO 2025-10-15 13:41:46,728 basehttp 960 20012 "GET /static/admin/css/responsive.css HTTP/1.1" 200 16565
+INFO 2025-10-15 13:41:46,734 basehttp 960 2068 "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2810
+INFO 2025-10-15 13:41:46,735 basehttp 960 3960 "GET /static/admin/css/base.css HTTP/1.1" 200 22120
+INFO 2025-10-15 13:41:46,779 basehttp 960 10340 "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2808
+INFO 2025-10-15 13:41:46,866 basehttp 960 22140 "GET /static/admin/js/theme.js HTTP/1.1" 200 1653
+INFO 2025-10-15 13:41:46,876 basehttp 960 10340 "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+WARNING 2025-10-15 13:41:47,041 log 960 10340 Not Found: /favicon.ico
+WARNING 2025-10-15 13:41:47,045 basehttp 960 10340 "GET /favicon.ico HTTP/1.1" 404 3556
+INFO 2025-10-15 13:41:58,350 basehttp 960 10340 "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2025-10-15 13:42:02,875 basehttp 960 10340 "GET /admin/ HTTP/1.1" 200 19978
+INFO 2025-10-15 13:42:02,972 basehttp 960 10340 "GET /static/admin/css/dashboard.css HTTP/1.1" 200 441
+INFO 2025-10-15 13:42:03,016 basehttp 960 10340 "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+INFO 2025-10-15 13:42:03,016 basehttp 960 22140 "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+INFO 2025-10-15 13:42:03,017 basehttp 960 3960 "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 200 392
+INFO 2025-10-15 13:42:16,571 basehttp 960 22140 "GET /admin/users/academicyear/ HTTP/1.1" 200 20768
+INFO 2025-10-15 13:42:16,660 basehttp 960 22140 "GET /static/admin/css/changelists.css HTTP/1.1" 200 6878
+INFO 2025-10-15 13:42:16,671 basehttp 960 2068 "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+INFO 2025-10-15 13:42:16,686 basehttp 960 2864 "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 9777
+INFO 2025-10-15 13:42:16,687 basehttp 960 20012 "GET /static/admin/js/core.js HTTP/1.1" 200 6208
+INFO 2025-10-15 13:42:16,714 basehttp 960 2068 "GET /static/admin/js/urlify.js HTTP/1.1" 200 7887
+INFO 2025-10-15 13:42:16,715 basehttp 960 22140 "GET /static/admin/js/actions.js HTTP/1.1" 200 8076
+INFO 2025-10-15 13:42:16,726 basehttp 960 2864 "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1531
+INFO 2025-10-15 13:42:16,742 basehttp 960 2068 "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+INFO 2025-10-15 13:42:16,742 basehttp 960 22140 "GET /static/admin/img/search.svg HTTP/1.1" 200 458
+INFO 2025-10-15 13:42:16,789 basehttp 960 10340 "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 285314
+INFO 2025-10-15 13:42:16,951 basehttp 960 20012 "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 325171
+INFO 2025-10-15 13:42:16,983 basehttp 960 20012 "GET /static/admin/js/filters.js HTTP/1.1" 200 978
+INFO 2025-10-15 13:42:17,083 basehttp 960 3960 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-10-15 13:42:17,152 basehttp 960 3960 "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+INFO 2025-10-15 13:42:17,152 basehttp 960 20012 "GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 200 581
+INFO 2025-10-15 13:42:23,279 basehttp 960 20012 "GET /admin/ HTTP/1.1" 200 19978
+INFO 2025-10-15 13:45:31,233 basehttp 960 20012 "GET /admin/token_blacklist/outstandingtoken/ HTTP/1.1" 200 22477
+INFO 2025-10-15 13:45:31,348 basehttp 960 20012 "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 200 1097
+INFO 2025-10-15 13:45:49,586 basehttp 960 20012 "GET /admin/users/academicyear/ HTTP/1.1" 200 20768
+INFO 2025-10-15 13:46:12,308 basehttp 960 20012 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-10-15 13:46:43,268 basehttp 960 20012 "GET /admin/users/student/ HTTP/1.1" 200 21048
+INFO 2025-10-15 13:46:58,928 basehttp 960 20012 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-10-15 13:47:06,217 basehttp 960 3960 "GET /admin/users/student/2/change/ HTTP/1.1" 200 43263
+INFO 2025-10-15 13:47:06,312 basehttp 960 22140 "GET /static/admin/css/autocomplete.css HTTP/1.1" 200 9185
+INFO 2025-10-15 13:47:06,316 basehttp 960 3960 "GET /static/admin/css/forms.css HTTP/1.1" 200 8525
+INFO 2025-10-15 13:47:06,326 basehttp 960 10340 "GET /static/admin/css/vendor/select2/select2.css HTTP/1.1" 200 17358
+INFO 2025-10-15 13:47:06,336 basehttp 960 2864 "GET /static/admin/js/vendor/select2/i18n/en.js HTTP/1.1" 200 844
+INFO 2025-10-15 13:47:06,360 basehttp 960 22140 "GET /static/admin/css/widgets.css HTTP/1.1" 200 11991
+INFO 2025-10-15 13:47:06,385 basehttp 960 7732 "GET /static/admin/js/autocomplete.js HTTP/1.1" 200 1060
+INFO 2025-10-15 13:47:06,385 basehttp 960 10340 "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 586
+INFO 2025-10-15 13:47:06,440 basehttp 960 2068 "GET /static/admin/js/vendor/select2/select2.full.js HTTP/1.1" 200 173566
+INFO 2025-10-15 13:47:06,491 basehttp 960 2068 "GET /static/admin/js/change_form.js HTTP/1.1" 200 606
+INFO 2025-10-15 13:47:06,824 basehttp 960 3960 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-10-15 13:47:14,640 basehttp 960 20012 - Broken pipe from ('127.0.0.1', 57531)
+INFO 2025-10-15 13:47:44,467 basehttp 960 3960 "GET /admin/users/student/ HTTP/1.1" 200 21048
+INFO 2025-10-15 13:50:00,191 basehttp 960 3960 "GET /admin/users/student/add/ HTTP/1.1" 200 42745
+INFO 2025-10-15 13:50:21,665 basehttp 960 3960 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-10-15 13:51:13,901 basehttp 960 3960 "GET /admin/autocomplete/?app_label=users&model_name=student&field_name=department HTTP/1.1" 200 91
+INFO 2025-10-15 13:51:15,707 basehttp 960 3960 "GET /admin/autocomplete/?app_label=users&model_name=student&field_name=department HTTP/1.1" 200 91
+INFO 2025-10-15 13:53:14,264 basehttp 960 3960 "GET /admin/autocomplete/?app_label=users&model_name=student&field_name=academic_year HTTP/1.1" 200 73
+INFO 2025-10-15 13:53:23,538 basehttp 960 3960 "GET /admin/autocomplete/?app_label=users&model_name=student&field_name=academic_year HTTP/1.1" 200 73
+INFO 2025-10-15 13:53:27,762 basehttp 960 3960 "GET /admin/users/academicyear/1/change/?_to_field=id HTTP/1.1" 200 24634
+INFO 2025-10-15 13:53:31,196 basehttp 960 3960 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-10-15 13:53:40,793 basehttp 960 3960 "GET /admin/users/student/add/ HTTP/1.1" 200 42745
+INFO 2025-10-15 13:55:27,389 basehttp 960 3960 "GET /admin/autocomplete/?app_label=users&model_name=student&field_name=department HTTP/1.1" 200 91
+ERROR 2025-10-15 13:56:46,796 log 960 3960 Internal Server Error: /admin/autocomplete/
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\sessions\backends\base.py", line 244, in _get_session
+    return self._session_cache
+           ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'SessionStore' object has no attribute '_session_cache'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\backends\base\base.py", line 279, in ensure_connection
+    self.connect()
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\backends\base\base.py", line 256, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\backends\postgresql\base.py", line 332, in get_new_connection
+    connection = self.Database.connect(**conn_params)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\psycopg2\__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.OperationalError: could not translate host name "aws-1-ap-south-1.pooler.supabase.com" to address: No such host is known. 
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\admin\sites.py", line 265, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\utils\decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\utils\decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\views\decorators\cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\admin\sites.py", line 234, in inner
+    if not self.has_permission(request):
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\admin\sites.py", line 207, in has_permission
+    return request.user.is_active and request.user.is_staff
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\utils\functional.py", line 251, in inner
+    self._setup()
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\utils\functional.py", line 404, in _setup
+    self._wrapped = self._setupfunc()
+                    ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\auth\middleware.py", line 40, in <lambda>
+    request.user = SimpleLazyObject(lambda: get_user(request))
+                                            ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\auth\middleware.py", line 20, in get_user
+    request._cached_user = auth.get_user(request)
+                           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\auth\__init__.py", line 304, in get_user
+    user_id = _get_user_session_key(request)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\auth\__init__.py", line 95, in _get_user_session_key
+    return get_user_model()._meta.pk.to_python(request.session[SESSION_KEY])
+                                               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\sessions\backends\base.py", line 55, in __getitem__
+    return self._session[key]
+           ^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\sessions\backends\base.py", line 249, in _get_session
+    self._session_cache = self.load()
+                          ^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\sessions\backends\db.py", line 55, in load
+    s = self._get_session_from_db()
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\sessions\backends\db.py", line 34, in _get_session_from_db
+    return self.model.objects.get(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\models\query.py", line 629, in get
+    num = len(clone)
+          ^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\models\query.py", line 366, in __len__
+    self._fetch_all()
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\models\query.py", line 1949, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\models\sql\compiler.py", line 1621, in execute_sql
+    cursor = self.connection.cursor()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\backends\base\base.py", line 320, in cursor
+    return self._cursor()
+           ^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\backends\base\base.py", line 296, in _cursor
+    self.ensure_connection()
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\backends\base\base.py", line 278, in ensure_connection
+    with self.wrap_database_errors:
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\backends\base\base.py", line 279, in ensure_connection
+    self.connect()
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\backends\base\base.py", line 256, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\backends\postgresql\base.py", line 332, in get_new_connection
+    connection = self.Database.connect(**conn_params)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\psycopg2\__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: could not translate host name "aws-1-ap-south-1.pooler.supabase.com" to address: No such host is known. 
+
+ERROR 2025-10-15 13:56:46,822 basehttp 960 3960 "GET /admin/autocomplete/?app_label=users&model_name=student&field_name=academic_year HTTP/1.1" 500 256541
+INFO 2025-10-15 13:57:20,158 basehttp 960 3960 "GET /admin/users/academicyear/add/?_to_field=id&_popup=1 HTTP/1.1" 200 10634
+INFO 2025-10-15 13:57:20,751 basehttp 960 3960 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-10-15 13:58:14,062 basehttp 960 3960 "GET /admin/users/student/add/ HTTP/1.1" 200 42745
+INFO 2025-10-15 13:59:28,765 basehttp 960 2676 "GET /admin/ HTTP/1.1" 200 19978
+INFO 2025-10-15 14:00:28,909 basehttp 960 14536 "GET /admin/users/student/add/ HTTP/1.1" 200 42745
+INFO 2025-10-15 14:00:28,944 basehttp 960 10792 "GET /static/admin/css/vendor/select2/select2.css HTTP/1.1" 200 17358
+INFO 2025-10-15 14:00:28,947 basehttp 960 14536 "GET /static/admin/css/forms.css HTTP/1.1" 304 0
+INFO 2025-10-15 14:00:28,981 basehttp 960 10792 "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+INFO 2025-10-15 14:00:28,986 basehttp 960 19612 "GET /static/admin/css/autocomplete.css HTTP/1.1" 200 9185
+INFO 2025-10-15 14:00:28,987 basehttp 960 14536 "GET /static/admin/js/autocomplete.js HTTP/1.1" 200 1060
+INFO 2025-10-15 14:00:28,988 basehttp 960 10792 "GET /static/admin/css/widgets.css HTTP/1.1" 304 0
+INFO 2025-10-15 14:00:28,989 basehttp 960 14428 "GET /static/admin/js/vendor/select2/i18n/en.js HTTP/1.1" 200 844
+INFO 2025-10-15 14:00:28,993 basehttp 960 12452 "GET /static/admin/js/vendor/select2/select2.full.js HTTP/1.1" 200 173566
+INFO 2025-10-15 14:00:29,003 basehttp 960 12452 "GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+INFO 2025-10-15 14:00:29,353 basehttp 960 12468 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-10-15 14:00:57,090 basehttp 960 2676 - Broken pipe from ('127.0.0.1', 56432)
+INFO 2025-10-15 14:03:04,724 basehttp 960 12468 "GET /admin/autocomplete/?app_label=users&model_name=student&field_name=department HTTP/1.1" 200 91
+INFO 2025-10-15 14:03:09,093 basehttp 960 12468 "GET /admin/autocomplete/?term=c&app_label=users&model_name=student&field_name=department HTTP/1.1" 200 91
+INFO 2025-10-15 14:03:14,452 basehttp 960 14428 "GET /admin/autocomplete/?term=2025&app_label=users&model_name=student&field_name=academic_year HTTP/1.1" 200 73
+INFO 2025-10-15 14:03:24,904 basehttp 960 12468 - Broken pipe from ('127.0.0.1', 50277)
+INFO 2025-10-15 14:03:29,710 basehttp 960 12452 - Broken pipe from ('127.0.0.1', 59804)
+INFO 2025-10-15 14:03:36,163 basehttp 960 14428 "GET /admin/autocomplete/?app_label=users&model_name=student&field_name=academic_year HTTP/1.1" 200 73
+INFO 2025-10-15 14:05:16,005 basehttp 960 14428 "POST /admin/users/student/add/ HTTP/1.1" 302 0
+INFO 2025-10-15 14:05:17,860 basehttp 960 14428 "GET /admin/users/student/ HTTP/1.1" 200 21809
+INFO 2025-10-15 14:05:19,320 basehttp 960 14428 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-10-15 14:05:31,537 basehttp 960 14428 "GET /admin/users/student/add/ HTTP/1.1" 200 42784
+INFO 2025-10-15 14:05:31,944 basehttp 960 14428 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-10-15 14:06:15,671 basehttp 960 14428 - Broken pipe from ('127.0.0.1', 60615)
+INFO 2025-10-15 14:06:19,167 basehttp 960 9612 "GET /admin/autocomplete/?term=CS&app_label=users&model_name=student&field_name=department HTTP/1.1" 200 91
+INFO 2025-10-15 14:06:19,974 basehttp 960 9612 "GET /admin/autocomplete/?term=CSE&app_label=users&model_name=student&field_name=department HTTP/1.1" 200 91
+INFO 2025-10-15 14:06:22,714 basehttp 960 9612 "GET /admin/autocomplete/?app_label=users&model_name=student&field_name=academic_year HTTP/1.1" 200 73
+INFO 2025-10-15 14:06:37,274 basehttp 960 19080 - Broken pipe from ('127.0.0.1', 64126)
+INFO 2025-10-15 14:06:39,587 basehttp 960 18756 - Broken pipe from ('127.0.0.1', 52839)
+ERROR 2025-10-15 14:07:00,319 log 960 8888 Internal Server Error: /admin/autocomplete/
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\sessions\backends\base.py", line 244, in _get_session
+    return self._session_cache
+           ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'SessionStore' object has no attribute '_session_cache'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\backends\base\base.py", line 279, in ensure_connection
+    self.connect()
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\backends\base\base.py", line 256, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\backends\postgresql\base.py", line 332, in get_new_connection
+    connection = self.Database.connect(**conn_params)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\psycopg2\__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.OperationalError: connection to server at "aws-1-ap-south-1.pooler.supabase.com" (3.111.225.200), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-1-ap-south-1.pooler.supabase.com" (13.200.110.68), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\admin\sites.py", line 265, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\utils\decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\utils\decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\views\decorators\cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\admin\sites.py", line 234, in inner
+    if not self.has_permission(request):
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\admin\sites.py", line 207, in has_permission
+    return request.user.is_active and request.user.is_staff
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\utils\functional.py", line 251, in inner
+    self._setup()
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\utils\functional.py", line 404, in _setup
+    self._wrapped = self._setupfunc()
+                    ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\auth\middleware.py", line 40, in <lambda>
+    request.user = SimpleLazyObject(lambda: get_user(request))
+                                            ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\auth\middleware.py", line 20, in get_user
+    request._cached_user = auth.get_user(request)
+                           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\auth\__init__.py", line 304, in get_user
+    user_id = _get_user_session_key(request)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\auth\__init__.py", line 95, in _get_user_session_key
+    return get_user_model()._meta.pk.to_python(request.session[SESSION_KEY])
+                                               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\sessions\backends\base.py", line 55, in __getitem__
+    return self._session[key]
+           ^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\sessions\backends\base.py", line 249, in _get_session
+    self._session_cache = self.load()
+                          ^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\sessions\backends\db.py", line 55, in load
+    s = self._get_session_from_db()
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\sessions\backends\db.py", line 34, in _get_session_from_db
+    return self.model.objects.get(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\models\query.py", line 629, in get
+    num = len(clone)
+          ^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\models\query.py", line 366, in __len__
+    self._fetch_all()
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\models\query.py", line 1949, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\models\sql\compiler.py", line 1621, in execute_sql
+    cursor = self.connection.cursor()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\backends\base\base.py", line 320, in cursor
+    return self._cursor()
+           ^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\backends\base\base.py", line 296, in _cursor
+    self.ensure_connection()
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\backends\base\base.py", line 278, in ensure_connection
+    with self.wrap_database_errors:
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\backends\base\base.py", line 279, in ensure_connection
+    self.connect()
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\backends\base\base.py", line 256, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\backends\postgresql\base.py", line 332, in get_new_connection
+    connection = self.Database.connect(**conn_params)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\psycopg2\__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: connection to server at "aws-1-ap-south-1.pooler.supabase.com" (3.111.225.200), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-1-ap-south-1.pooler.supabase.com" (13.200.110.68), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+
+INFO 2025-10-15 14:07:00,344 basehttp 960 8888 - Broken pipe from ('127.0.0.1', 64853)
+INFO 2025-10-15 14:07:53,349 basehttp 960 9612 - Broken pipe from ('127.0.0.1', 61638)
+ERROR 2025-10-15 14:08:41,127 log 960 17048 Internal Server Error: /admin/users/student/add/
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\sessions\backends\base.py", line 244, in _get_session
+    return self._session_cache
+           ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'SessionStore' object has no attribute '_session_cache'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\backends\base\base.py", line 279, in ensure_connection
+    self.connect()
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\backends\base\base.py", line 256, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\backends\postgresql\base.py", line 332, in get_new_connection
+    connection = self.Database.connect(**conn_params)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\psycopg2\__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.OperationalError: connection to server at "aws-1-ap-south-1.pooler.supabase.com" (13.200.110.68), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-1-ap-south-1.pooler.supabase.com" (3.111.225.200), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\admin\options.py", line 719, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\utils\decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\utils\decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\views\decorators\cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\admin\sites.py", line 234, in inner
+    if not self.has_permission(request):
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\admin\sites.py", line 207, in has_permission
+    return request.user.is_active and request.user.is_staff
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\utils\functional.py", line 251, in inner
+    self._setup()
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\utils\functional.py", line 404, in _setup
+    self._wrapped = self._setupfunc()
+                    ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\auth\middleware.py", line 40, in <lambda>
+    request.user = SimpleLazyObject(lambda: get_user(request))
+                                            ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\auth\middleware.py", line 20, in get_user
+    request._cached_user = auth.get_user(request)
+                           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\auth\__init__.py", line 304, in get_user
+    user_id = _get_user_session_key(request)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\auth\__init__.py", line 95, in _get_user_session_key
+    return get_user_model()._meta.pk.to_python(request.session[SESSION_KEY])
+                                               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\sessions\backends\base.py", line 55, in __getitem__
+    return self._session[key]
+           ^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\sessions\backends\base.py", line 249, in _get_session
+    self._session_cache = self.load()
+                          ^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\sessions\backends\db.py", line 55, in load
+    s = self._get_session_from_db()
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\sessions\backends\db.py", line 34, in _get_session_from_db
+    return self.model.objects.get(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\models\query.py", line 629, in get
+    num = len(clone)
+          ^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\models\query.py", line 366, in __len__
+    self._fetch_all()
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\models\query.py", line 1949, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\models\sql\compiler.py", line 1621, in execute_sql
+    cursor = self.connection.cursor()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\backends\base\base.py", line 320, in cursor
+    return self._cursor()
+           ^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\backends\base\base.py", line 296, in _cursor
+    self.ensure_connection()
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\backends\base\base.py", line 278, in ensure_connection
+    with self.wrap_database_errors:
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\backends\base\base.py", line 279, in ensure_connection
+    self.connect()
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\backends\base\base.py", line 256, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\backends\postgresql\base.py", line 332, in get_new_connection
+    connection = self.Database.connect(**conn_params)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\psycopg2\__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: connection to server at "aws-1-ap-south-1.pooler.supabase.com" (13.200.110.68), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-1-ap-south-1.pooler.supabase.com" (3.111.225.200), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+
+ERROR 2025-10-15 14:08:41,138 basehttp 960 17048 "POST /admin/users/student/add/ HTTP/1.1" 500 261433
+INFO 2025-10-15 14:09:31,999 basehttp 960 17048 "POST /admin/users/student/add/ HTTP/1.1" 200 43343
+INFO 2025-10-15 14:09:53,760 basehttp 960 17048 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-10-15 14:10:15,901 basehttp 960 17048 "GET /admin/users/student/ HTTP/1.1" 200 22141
+INFO 2025-10-15 14:10:37,478 basehttp 960 17048 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-10-15 14:13:25,409 basehttp 960 22840 - Broken pipe from ('127.0.0.1', 52950)
+WARNING 2025-10-15 14:22:05,192 log 960 19960 Not Found: /
+WARNING 2025-10-15 14:22:05,194 basehttp 960 19960 "GET / HTTP/1.1" 404 3505
+INFO 2025-10-15 14:22:10,181 basehttp 960 19960 "GET /admin/ HTTP/1.1" 200 20698
+INFO 2025-10-15 14:24:19,754 basehttp 960 3612 "GET /admin/ HTTP/1.1" 200 20698
+WARNING 2025-10-15 14:24:20,006 log 960 3612 Not Found: /favicon.ico
+WARNING 2025-10-15 14:24:20,007 basehttp 960 3612 "GET /favicon.ico HTTP/1.1" 404 3556
+INFO 2025-10-15 14:26:04,716 basehttp 960 3612 "GET /admin/users/student/add/ HTTP/1.1" 200 42823
+INFO 2025-10-15 14:26:06,221 basehttp 960 3612 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-10-15 14:29:25,250 basehttp 960 3612 "GET /admin/autocomplete/?app_label=users&model_name=student&field_name=department HTTP/1.1" 200 91
+INFO 2025-10-15 14:29:49,883 basehttp 960 3612 "GET /admin/autocomplete/?app_label=users&model_name=student&field_name=academic_year HTTP/1.1" 200 73
+ERROR 2025-10-15 14:30:52,089 log 960 3612 Internal Server Error: /admin/autocomplete/
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\sessions\backends\base.py", line 244, in _get_session
+    return self._session_cache
+           ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'SessionStore' object has no attribute '_session_cache'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\backends\base\base.py", line 279, in ensure_connection
+    self.connect()
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\backends\base\base.py", line 256, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\backends\postgresql\base.py", line 332, in get_new_connection
+    connection = self.Database.connect(**conn_params)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\psycopg2\__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.OperationalError: could not translate host name "aws-1-ap-south-1.pooler.supabase.com" to address: No such host is known. 
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\admin\sites.py", line 265, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\utils\decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\utils\decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\views\decorators\cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\admin\sites.py", line 234, in inner
+    if not self.has_permission(request):
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\admin\sites.py", line 207, in has_permission
+    return request.user.is_active and request.user.is_staff
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\utils\functional.py", line 251, in inner
+    self._setup()
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\utils\functional.py", line 404, in _setup
+    self._wrapped = self._setupfunc()
+                    ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\auth\middleware.py", line 40, in <lambda>
+    request.user = SimpleLazyObject(lambda: get_user(request))
+                                            ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\auth\middleware.py", line 20, in get_user
+    request._cached_user = auth.get_user(request)
+                           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\auth\__init__.py", line 304, in get_user
+    user_id = _get_user_session_key(request)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\auth\__init__.py", line 95, in _get_user_session_key
+    return get_user_model()._meta.pk.to_python(request.session[SESSION_KEY])
+                                               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\sessions\backends\base.py", line 55, in __getitem__
+    return self._session[key]
+           ^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\sessions\backends\base.py", line 249, in _get_session
+    self._session_cache = self.load()
+                          ^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\sessions\backends\db.py", line 55, in load
+    s = self._get_session_from_db()
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\sessions\backends\db.py", line 34, in _get_session_from_db
+    return self.model.objects.get(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\models\query.py", line 629, in get
+    num = len(clone)
+          ^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\models\query.py", line 366, in __len__
+    self._fetch_all()
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\models\query.py", line 1949, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\models\sql\compiler.py", line 1621, in execute_sql
+    cursor = self.connection.cursor()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\backends\base\base.py", line 320, in cursor
+    return self._cursor()
+           ^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\backends\base\base.py", line 296, in _cursor
+    self.ensure_connection()
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\backends\base\base.py", line 278, in ensure_connection
+    with self.wrap_database_errors:
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\backends\base\base.py", line 279, in ensure_connection
+    self.connect()
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\backends\base\base.py", line 256, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\backends\postgresql\base.py", line 332, in get_new_connection
+    connection = self.Database.connect(**conn_params)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\psycopg2\__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: could not translate host name "aws-1-ap-south-1.pooler.supabase.com" to address: No such host is known. 
+
+ERROR 2025-10-15 14:30:52,100 basehttp 960 3612 "GET /admin/autocomplete/?app_label=users&model_name=student&field_name=academic_year HTTP/1.1" 500 256535
+INFO 2025-10-15 14:33:22,383 basehttp 960 3612 "GET /admin/autocomplete/?app_label=users&model_name=student&field_name=academic_year HTTP/1.1" 200 73
+INFO 2025-10-15 14:33:51,605 basehttp 960 3612 "GET /admin/autocomplete/?app_label=users&model_name=student&field_name=academic_year HTTP/1.1" 200 73
+INFO 2025-10-15 14:57:22,198 basehttp 960 22292 "POST /admin/users/student/add/ HTTP/1.1" 302 0
+INFO 2025-10-15 14:57:26,025 basehttp 960 22292 "GET /admin/users/student/ HTTP/1.1" 200 22926
+INFO 2025-10-15 14:57:50,671 basehttp 960 22292 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-10-15 15:04:27,259 basehttp 960 22148 "GET /admin/users/student/ HTTP/1.1" 200 22704
+INFO 2025-10-15 15:04:30,743 basehttp 960 22148 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+ERROR 2025-10-15 15:05:18,157 log 960 22148 Internal Server Error: /admin/users/student/5/change/
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\sessions\backends\base.py", line 244, in _get_session
+    return self._session_cache
+           ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'SessionStore' object has no attribute '_session_cache'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\backends\base\base.py", line 279, in ensure_connection
+    self.connect()
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\backends\base\base.py", line 256, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\backends\postgresql\base.py", line 332, in get_new_connection
+    connection = self.Database.connect(**conn_params)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\psycopg2\__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.OperationalError: connection to server at "aws-1-ap-south-1.pooler.supabase.com" (13.200.110.68), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-1-ap-south-1.pooler.supabase.com" (3.111.225.200), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\admin\options.py", line 719, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\utils\decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\utils\decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\views\decorators\cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\admin\sites.py", line 234, in inner
+    if not self.has_permission(request):
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\admin\sites.py", line 207, in has_permission
+    return request.user.is_active and request.user.is_staff
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\utils\functional.py", line 251, in inner
+    self._setup()
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\utils\functional.py", line 404, in _setup
+    self._wrapped = self._setupfunc()
+                    ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\auth\middleware.py", line 40, in <lambda>
+    request.user = SimpleLazyObject(lambda: get_user(request))
+                                            ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\auth\middleware.py", line 20, in get_user
+    request._cached_user = auth.get_user(request)
+                           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\auth\__init__.py", line 304, in get_user
+    user_id = _get_user_session_key(request)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\auth\__init__.py", line 95, in _get_user_session_key
+    return get_user_model()._meta.pk.to_python(request.session[SESSION_KEY])
+                                               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\sessions\backends\base.py", line 55, in __getitem__
+    return self._session[key]
+           ^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\sessions\backends\base.py", line 249, in _get_session
+    self._session_cache = self.load()
+                          ^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\sessions\backends\db.py", line 55, in load
+    s = self._get_session_from_db()
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\sessions\backends\db.py", line 34, in _get_session_from_db
+    return self.model.objects.get(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\models\query.py", line 629, in get
+    num = len(clone)
+          ^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\models\query.py", line 366, in __len__
+    self._fetch_all()
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\models\query.py", line 1949, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\models\sql\compiler.py", line 1621, in execute_sql
+    cursor = self.connection.cursor()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\backends\base\base.py", line 320, in cursor
+    return self._cursor()
+           ^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\backends\base\base.py", line 296, in _cursor
+    self.ensure_connection()
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\backends\base\base.py", line 278, in ensure_connection
+    with self.wrap_database_errors:
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\backends\base\base.py", line 279, in ensure_connection
+    self.connect()
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\backends\base\base.py", line 256, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\backends\postgresql\base.py", line 332, in get_new_connection
+    connection = self.Database.connect(**conn_params)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\psycopg2\__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: connection to server at "aws-1-ap-south-1.pooler.supabase.com" (13.200.110.68), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-1-ap-south-1.pooler.supabase.com" (3.111.225.200), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+
+ERROR 2025-10-15 15:05:18,170 basehttp 960 22148 "GET /admin/users/student/5/change/ HTTP/1.1" 500 257836
+INFO 2025-10-15 15:05:54,926 basehttp 960 22148 "GET /admin/users/student/5/change/ HTTP/1.1" 200 43395
+INFO 2025-10-15 15:05:56,445 basehttp 960 22148 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-10-15 15:06:55,954 basehttp 960 22148 - Broken pipe from ('127.0.0.1', 56431)
+INFO 2025-10-15 15:07:00,063 basehttp 960 19936 "GET /admin/users/student/add/ HTTP/1.1" 200 42825
+INFO 2025-10-15 15:07:07,617 basehttp 960 19936 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-10-15 15:09:28,894 basehttp 960 19936 "GET /admin/autocomplete/?app_label=users&model_name=student&field_name=department HTTP/1.1" 200 91
+INFO 2025-10-15 15:09:49,702 basehttp 960 19936 "GET /admin/autocomplete/?app_label=users&model_name=student&field_name=academic_year HTTP/1.1" 200 73
+ERROR 2025-10-15 15:13:02,328 log 960 19936 Internal Server Error: /admin/users/teacher/add/
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\sessions\backends\base.py", line 244, in _get_session
+    return self._session_cache
+           ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'SessionStore' object has no attribute '_session_cache'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\backends\base\base.py", line 279, in ensure_connection
+    self.connect()
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\backends\base\base.py", line 256, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\backends\postgresql\base.py", line 332, in get_new_connection
+    connection = self.Database.connect(**conn_params)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\psycopg2\__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.OperationalError: could not translate host name "aws-1-ap-south-1.pooler.supabase.com" to address: No such host is known. 
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\admin\options.py", line 719, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\utils\decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\utils\decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\views\decorators\cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\admin\sites.py", line 234, in inner
+    if not self.has_permission(request):
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\admin\sites.py", line 207, in has_permission
+    return request.user.is_active and request.user.is_staff
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\utils\functional.py", line 251, in inner
+    self._setup()
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\utils\functional.py", line 404, in _setup
+    self._wrapped = self._setupfunc()
+                    ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\auth\middleware.py", line 40, in <lambda>
+    request.user = SimpleLazyObject(lambda: get_user(request))
+                                            ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\auth\middleware.py", line 20, in get_user
+    request._cached_user = auth.get_user(request)
+                           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\auth\__init__.py", line 304, in get_user
+    user_id = _get_user_session_key(request)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\auth\__init__.py", line 95, in _get_user_session_key
+    return get_user_model()._meta.pk.to_python(request.session[SESSION_KEY])
+                                               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\sessions\backends\base.py", line 55, in __getitem__
+    return self._session[key]
+           ^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\sessions\backends\base.py", line 249, in _get_session
+    self._session_cache = self.load()
+                          ^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\sessions\backends\db.py", line 55, in load
+    s = self._get_session_from_db()
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\sessions\backends\db.py", line 34, in _get_session_from_db
+    return self.model.objects.get(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\models\query.py", line 629, in get
+    num = len(clone)
+          ^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\models\query.py", line 366, in __len__
+    self._fetch_all()
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\models\query.py", line 1949, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\models\sql\compiler.py", line 1621, in execute_sql
+    cursor = self.connection.cursor()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\backends\base\base.py", line 320, in cursor
+    return self._cursor()
+           ^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\backends\base\base.py", line 296, in _cursor
+    self.ensure_connection()
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\backends\base\base.py", line 278, in ensure_connection
+    with self.wrap_database_errors:
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\backends\base\base.py", line 279, in ensure_connection
+    self.connect()
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\backends\base\base.py", line 256, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\backends\postgresql\base.py", line 332, in get_new_connection
+    connection = self.Database.connect(**conn_params)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\psycopg2\__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: could not translate host name "aws-1-ap-south-1.pooler.supabase.com" to address: No such host is known. 
+
+ERROR 2025-10-15 15:13:02,342 basehttp 960 19936 "GET /admin/users/teacher/add/ HTTP/1.1" 500 255932
+INFO 2025-10-15 15:14:01,334 basehttp 960 536 "GET /admin/users/teacher/add/ HTTP/1.1" 200 27877
+INFO 2025-10-15 15:14:09,111 basehttp 960 536 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-10-15 15:14:33,876 basehttp 960 536 - Broken pipe from ('127.0.0.1', 58694)
+INFO 2025-10-15 15:25:47,933 autoreload 24240 23372 Watching for file changes with StatReloader
+INFO 2025-10-15 15:27:15,244 autoreload 10464 21344 Watching for file changes with StatReloader
+INFO 2025-10-15 15:27:33,579 basehttp 10464 12020 "GET /admin/ HTTP/1.1" 200 21067
+WARNING 2025-10-15 15:27:33,821 log 10464 12020 Not Found: /favicon.ico
+WARNING 2025-10-15 15:27:33,823 basehttp 10464 12020 "GET /favicon.ico HTTP/1.1" 404 3556
+INFO 2025-10-15 15:27:41,353 basehttp 10464 3300 "GET /admin/ HTTP/1.1" 200 21067
+INFO 2025-10-15 15:27:42,482 basehttp 10464 12020 "GET /admin/users/student/add/ HTTP/1.1" 200 42633
+INFO 2025-10-15 15:27:43,092 basehttp 10464 12020 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-10-15 15:44:54,787 autoreload 19520 3332 Watching for file changes with StatReloader
+INFO 2025-10-15 15:45:37,095 basehttp 19520 22500 "GET /admin/users/student/add/ HTTP/1.1" 200 42633
+INFO 2025-10-15 15:45:38,688 basehttp 19520 22500 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-10-15 15:45:50,812 basehttp 19520 24896 "GET /admin/ HTTP/1.1" 200 21067
+INFO 2025-10-15 15:45:57,930 basehttp 19520 24896 "GET /admin/users/student/add/ HTTP/1.1" 200 42633
+INFO 2025-10-15 15:46:00,243 basehttp 19520 22500 - Broken pipe from ('127.0.0.1', 60955)
+INFO 2025-10-15 15:46:26,471 basehttp 19520 24896 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-10-16 10:51:28,736 autoreload 9340 24592 Watching for file changes with StatReloader
+WARNING 2025-10-16 10:51:40,828 log 9340 24960 Not Found: /
+WARNING 2025-10-16 10:51:40,828 basehttp 9340 24960 "GET / HTTP/1.1" 404 3505
+WARNING 2025-10-16 10:51:41,408 log 9340 24960 Not Found: /favicon.ico
+WARNING 2025-10-16 10:51:41,409 basehttp 9340 24960 "GET /favicon.ico HTTP/1.1" 404 3556
+INFO 2025-10-16 10:51:49,170 basehttp 9340 24508 - Broken pipe from ('127.0.0.1', 55659)
+INFO 2025-10-16 10:52:16,785 basehttp 9340 8140 "GET /admin/ HTTP/1.1" 200 21067
+WARNING 2025-10-16 10:52:17,229 log 9340 8140 Not Found: /favicon.ico
+WARNING 2025-10-16 10:52:17,229 basehttp 9340 8140 "GET /favicon.ico HTTP/1.1" 404 3556
+INFO 2025-10-16 10:52:54,056 basehttp 9340 8140 "GET /admin/users/student/add/ HTTP/1.1" 200 42633
+INFO 2025-10-16 10:52:54,253 basehttp 9340 8140 "GET /static/admin/css/vendor/select2/select2.css HTTP/1.1" 200 17358
+INFO 2025-10-16 10:52:54,261 basehttp 9340 14080 "GET /static/admin/css/autocomplete.css HTTP/1.1" 200 9185
+INFO 2025-10-16 10:52:54,275 basehttp 9340 7368 "GET /static/admin/js/autocomplete.js HTTP/1.1" 200 1060
+INFO 2025-10-16 10:52:54,275 basehttp 9340 10504 "GET /static/admin/js/vendor/select2/i18n/en.js HTTP/1.1" 200 844
+INFO 2025-10-16 10:52:54,413 basehttp 9340 1312 "GET /static/admin/js/vendor/select2/select2.full.js HTTP/1.1" 200 173566
+INFO 2025-10-16 10:53:15,574 basehttp 9340 23948 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-10-16 10:54:02,959 basehttp 9340 23948 "POST /admin/logout/ HTTP/1.1" 200 3572
+INFO 2025-10-16 10:54:07,832 basehttp 9340 23948 "GET /admin/ HTTP/1.1" 302 0
+INFO 2025-10-16 10:54:07,877 basehttp 9340 23948 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4177
+INFO 2025-10-16 10:54:16,022 basehttp 9340 23948 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 4347
+INFO 2025-10-16 10:54:44,176 basehttp 9340 23948 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 4347
+INFO 2025-10-16 10:54:53,164 basehttp 9340 23948 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 4347
+INFO 2025-10-16 10:55:12,299 basehttp 9340 23948 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 4347
+INFO 2025-10-16 10:55:30,286 basehttp 9340 23948 "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2025-10-16 10:55:30,699 basehttp 9340 23948 "GET /admin/ HTTP/1.1" 200 22790
+INFO 2025-10-16 10:56:31,458 basehttp 9340 23948 "GET /admin/users/student/ HTTP/1.1" 200 22702
+INFO 2025-10-16 10:56:57,454 basehttp 9340 1312 "GET /admin/users/student/ HTTP/1.1" 200 22702
+ERROR 2025-10-16 10:57:14,592 log 9340 23948 Internal Server Error: /admin/jsi18n/
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\sessions\backends\base.py", line 244, in _get_session
+    return self._session_cache
+           ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'SessionStore' object has no attribute '_session_cache'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\backends\base\base.py", line 279, in ensure_connection
+    self.connect()
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\backends\base\base.py", line 256, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\backends\postgresql\base.py", line 332, in get_new_connection
+    connection = self.Database.connect(**conn_params)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\psycopg2\__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.OperationalError: connection to server at "aws-1-ap-south-1.pooler.supabase.com" (3.111.225.200), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-1-ap-south-1.pooler.supabase.com" (13.200.110.68), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\admin\sites.py", line 265, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\utils\decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\utils\decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\admin\sites.py", line 234, in inner
+    if not self.has_permission(request):
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\admin\sites.py", line 207, in has_permission
+    return request.user.is_active and request.user.is_staff
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\utils\functional.py", line 251, in inner
+    self._setup()
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\utils\functional.py", line 404, in _setup
+    self._wrapped = self._setupfunc()
+                    ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\auth\middleware.py", line 40, in <lambda>
+    request.user = SimpleLazyObject(lambda: get_user(request))
+                                            ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\auth\middleware.py", line 20, in get_user
+    request._cached_user = auth.get_user(request)
+                           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\auth\__init__.py", line 304, in get_user
+    user_id = _get_user_session_key(request)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\auth\__init__.py", line 95, in _get_user_session_key
+    return get_user_model()._meta.pk.to_python(request.session[SESSION_KEY])
+                                               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\sessions\backends\base.py", line 55, in __getitem__
+    return self._session[key]
+           ^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\sessions\backends\base.py", line 249, in _get_session
+    self._session_cache = self.load()
+                          ^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\sessions\backends\db.py", line 55, in load
+    s = self._get_session_from_db()
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\sessions\backends\db.py", line 34, in _get_session_from_db
+    return self.model.objects.get(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\models\query.py", line 629, in get
+    num = len(clone)
+          ^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\models\query.py", line 366, in __len__
+    self._fetch_all()
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\models\query.py", line 1949, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\models\sql\compiler.py", line 1621, in execute_sql
+    cursor = self.connection.cursor()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\backends\base\base.py", line 320, in cursor
+    return self._cursor()
+           ^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\backends\base\base.py", line 296, in _cursor
+    self.ensure_connection()
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\backends\base\base.py", line 278, in ensure_connection
+    with self.wrap_database_errors:
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\backends\base\base.py", line 279, in ensure_connection
+    self.connect()
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\backends\base\base.py", line 256, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\backends\postgresql\base.py", line 332, in get_new_connection
+    connection = self.Database.connect(**conn_params)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\psycopg2\__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: connection to server at "aws-1-ap-south-1.pooler.supabase.com" (3.111.225.200), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-1-ap-south-1.pooler.supabase.com" (13.200.110.68), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+
+ERROR 2025-10-16 10:57:14,601 basehttp 9340 23948 "GET /admin/jsi18n/ HTTP/1.1" 500 253237
+INFO 2025-10-16 10:59:26,232 basehttp 9340 23948 "GET /admin/users/student/2/change/ HTTP/1.1" 200 43138
+INFO 2025-10-16 10:59:29,676 basehttp 9340 23948 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+ERROR 2025-10-16 10:59:45,146 log 9340 23948 Internal Server Error: /admin/users/student/2/change/
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.UniqueViolation: duplicate key value violates unique constraint "users_user_username_key"
+DETAIL:  Key (username)=(25CSE001) already exists.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\admin\options.py", line 719, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\utils\decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\utils\decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\views\decorators\cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\admin\sites.py", line 246, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\admin\options.py", line 1987, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\utils\decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\utils\decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\admin\options.py", line 1843, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\admin\options.py", line 1894, in _changeform_view
+    self.save_model(request, new_object, form, not add)
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\attendance_system\users\admin.py", line 231, in save_model
+    user = User.objects.create_user(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\auth\models.py", line 175, in create_user
+    return self._create_user(username, email, password, **extra_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\auth\models.py", line 163, in _create_user
+    user.save(using=self._db)
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\auth\base_user.py", line 65, in save
+    super().save(*args, **kwargs)
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\models\base.py", line 902, in save
+    self.save_base(
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\models\base.py", line 1008, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\models\base.py", line 1169, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\models\base.py", line 1210, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\models\query.py", line 1868, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\models\sql\compiler.py", line 1882, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.IntegrityError: duplicate key value violates unique constraint "users_user_username_key"
+DETAIL:  Key (username)=(25CSE001) already exists.
+
+ERROR 2025-10-16 10:59:45,153 basehttp 9340 23948 "POST /admin/users/student/2/change/ HTTP/1.1" 500 238829
+INFO 2025-10-16 11:00:24,677 basehttp 9340 23948 "GET /admin/users/student/2/change/ HTTP/1.1" 200 43138
+INFO 2025-10-16 11:00:32,159 basehttp 9340 23948 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-10-16 11:01:03,177 basehttp 9340 23948 "GET /admin/users/student/2/change/ HTTP/1.1" 200 43138
+INFO 2025-10-16 11:01:03,647 basehttp 9340 23948 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+ERROR 2025-10-16 11:01:14,221 log 9340 23948 Internal Server Error: /admin/users/student/2/change/
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.UniqueViolation: duplicate key value violates unique constraint "users_user_username_key"
+DETAIL:  Key (username)=(25CSE001) already exists.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\admin\options.py", line 719, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\utils\decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\utils\decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\views\decorators\cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\admin\sites.py", line 246, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\admin\options.py", line 1987, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\utils\decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\utils\decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\admin\options.py", line 1843, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\admin\options.py", line 1894, in _changeform_view
+    self.save_model(request, new_object, form, not add)
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\attendance_system\users\admin.py", line 231, in save_model
+    user = User.objects.create_user(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\auth\models.py", line 175, in create_user
+    return self._create_user(username, email, password, **extra_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\auth\models.py", line 163, in _create_user
+    user.save(using=self._db)
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\auth\base_user.py", line 65, in save
+    super().save(*args, **kwargs)
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\models\base.py", line 902, in save
+    self.save_base(
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\models\base.py", line 1008, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\models\base.py", line 1169, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\models\base.py", line 1210, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\models\query.py", line 1868, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\models\sql\compiler.py", line 1882, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.IntegrityError: duplicate key value violates unique constraint "users_user_username_key"
+DETAIL:  Key (username)=(25CSE001) already exists.
+
+ERROR 2025-10-16 11:01:14,223 basehttp 9340 23948 "POST /admin/users/student/2/change/ HTTP/1.1" 500 238815
+INFO 2025-10-16 11:01:30,467 basehttp 9340 23948 "GET /admin/users/student/2/change/ HTTP/1.1" 200 43138
+INFO 2025-10-16 11:01:42,324 basehttp 9340 23948 "GET /admin/users/student/ HTTP/1.1" 200 22702
+INFO 2025-10-16 11:01:50,865 basehttp 9340 23948 "GET /admin/users/student/2/change/ HTTP/1.1" 200 43138
+INFO 2025-10-16 11:01:59,379 basehttp 9340 23948 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+ERROR 2025-10-16 11:03:15,593 log 9340 23948 Internal Server Error: /admin/users/student/2/change/
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.UniqueViolation: duplicate key value violates unique constraint "users_user_username_key"
+DETAIL:  Key (username)=(25CSE001) already exists.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\admin\options.py", line 719, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\utils\decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\utils\decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\views\decorators\cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\admin\sites.py", line 246, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\admin\options.py", line 1987, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\utils\decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\utils\decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\admin\options.py", line 1843, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\admin\options.py", line 1894, in _changeform_view
+    self.save_model(request, new_object, form, not add)
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\attendance_system\users\admin.py", line 231, in save_model
+    user = User.objects.create_user(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\auth\models.py", line 175, in create_user
+    return self._create_user(username, email, password, **extra_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\auth\models.py", line 163, in _create_user
+    user.save(using=self._db)
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\auth\base_user.py", line 65, in save
+    super().save(*args, **kwargs)
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\models\base.py", line 902, in save
+    self.save_base(
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\models\base.py", line 1008, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\models\base.py", line 1169, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\models\base.py", line 1210, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\models\query.py", line 1868, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\models\sql\compiler.py", line 1882, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.IntegrityError: duplicate key value violates unique constraint "users_user_username_key"
+DETAIL:  Key (username)=(25CSE001) already exists.
+
+ERROR 2025-10-16 11:03:15,597 basehttp 9340 23948 "POST /admin/users/student/2/change/ HTTP/1.1" 500 238829
+INFO 2025-10-16 11:03:33,312 basehttp 9340 23948 "GET /admin/users/student/2/change/ HTTP/1.1" 200 43138
+INFO 2025-10-16 11:44:16,661 autoreload 23232 16264 Watching for file changes with StatReloader
+INFO 2025-10-16 11:49:50,287 autoreload 16544 23080 Watching for file changes with StatReloader
+INFO 2025-10-16 11:50:00,586 basehttp 16544 3224 "GET /admin/users/student/2/change/ HTTP/1.1" 200 43138
+INFO 2025-10-16 11:50:04,148 basehttp 16544 3224 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-10-16 11:50:11,845 basehttp 16544 3224 "POST /admin/logout/ HTTP/1.1" 200 3572
+INFO 2025-10-16 11:50:13,759 basehttp 16544 3224 "GET /admin/ HTTP/1.1" 302 0
+INFO 2025-10-16 11:50:13,793 basehttp 16544 3224 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4177
+INFO 2025-10-16 11:50:33,666 basehttp 16544 3224 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 4348
+INFO 2025-10-16 11:50:45,197 basehttp 16544 3224 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 4348
+INFO 2025-10-16 11:55:35,675 autoreload 8040 15800 Watching for file changes with StatReloader
+INFO 2025-10-16 11:56:08,773 basehttp 8040 22916 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4177
+INFO 2025-10-16 11:56:32,533 basehttp 8040 22916 "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2025-10-16 11:56:33,022 basehttp 8040 22916 "GET /admin/ HTTP/1.1" 200 22790
+INFO 2025-10-16 11:56:40,402 basehttp 8040 22916 "GET /admin/users/student/add/ HTTP/1.1" 200 42629
+INFO 2025-10-16 11:56:47,856 basehttp 8040 22916 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-10-16 11:56:57,844 basehttp 8040 22916 "GET /admin/ HTTP/1.1" 200 22790
+INFO 2025-10-16 11:57:02,995 basehttp 8040 22916 "GET /admin/users/student/ HTTP/1.1" 200 22702
+INFO 2025-10-16 11:57:10,476 basehttp 8040 22916 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-10-16 11:57:20,337 basehttp 8040 22916 "GET /admin/users/student/2/change/ HTTP/1.1" 200 43138
+INFO 2025-10-16 11:57:20,839 basehttp 8040 22916 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+ERROR 2025-10-16 11:57:39,405 log 8040 22916 Internal Server Error: /admin/users/student/2/change/
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.UniqueViolation: duplicate key value violates unique constraint "users_user_username_key"
+DETAIL:  Key (username)=(25CSE001) already exists.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\admin\options.py", line 719, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\utils\decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\utils\decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\views\decorators\cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\admin\sites.py", line 246, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\admin\options.py", line 1987, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\utils\decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\utils\decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\admin\options.py", line 1843, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\admin\options.py", line 1894, in _changeform_view
+    self.save_model(request, new_object, form, not add)
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\attendance_system\users\admin.py", line 231, in save_model
+    user = User.objects.create_user(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\auth\models.py", line 175, in create_user
+    return self._create_user(username, email, password, **extra_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\auth\models.py", line 163, in _create_user
+    user.save(using=self._db)
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\auth\base_user.py", line 65, in save
+    super().save(*args, **kwargs)
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\models\base.py", line 902, in save
+    self.save_base(
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\models\base.py", line 1008, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\models\base.py", line 1169, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\models\base.py", line 1210, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\models\query.py", line 1868, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\models\sql\compiler.py", line 1882, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.IntegrityError: duplicate key value violates unique constraint "users_user_username_key"
+DETAIL:  Key (username)=(25CSE001) already exists.
+
+ERROR 2025-10-16 11:57:39,444 basehttp 8040 22916 "POST /admin/users/student/2/change/ HTTP/1.1" 500 238814
+INFO 2025-10-16 11:57:54,172 basehttp 8040 6572 "GET /admin/users/student/ HTTP/1.1" 200 22702
+INFO 2025-10-16 11:57:55,755 basehttp 8040 22916 - Broken pipe from ('127.0.0.1', 59297)
+INFO 2025-10-16 11:58:58,841 autoreload 12776 7944 Watching for file changes with StatReloader
+INFO 2025-10-16 12:03:22,822 autoreload 8912 13976 Watching for file changes with StatReloader
+INFO 2025-10-16 12:04:30,555 basehttp 8912 22488 "POST /admin/users/student/ HTTP/1.1" 200 17830
+INFO 2025-10-16 12:04:30,677 basehttp 8912 22488 "GET /static/admin/js/cancel.js HTTP/1.1" 200 884
+INFO 2025-10-16 12:06:24,210 basehttp 8912 22488 "GET /admin/ HTTP/1.1" 200 22790
+INFO 2025-10-16 12:12:56,768 basehttp 8912 16028 "GET /admin/users/student/ HTTP/1.1" 200 22702
+INFO 2025-10-16 12:12:58,246 basehttp 8912 16028 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-10-16 12:14:00,193 basehttp 8912 23828 "GET /admin/users/student/2/change/ HTTP/1.1" 200 41512
+INFO 2025-10-16 12:14:04,411 basehttp 8912 23828 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+ERROR 2025-10-16 12:15:04,541 log 8912 23828 Internal Server Error: /admin/users/student/2/change/
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.OperationalError: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\admin\options.py", line 719, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\utils\decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\utils\decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\views\decorators\cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\admin\sites.py", line 246, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\admin\options.py", line 1987, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\utils\decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\utils\decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\admin\options.py", line 1843, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\admin\options.py", line 1863, in _changeform_view
+    obj = self.get_object(request, unquote(object_id), to_field)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\contrib\admin\options.py", line 897, in get_object
+    return queryset.get(**{field.name: object_id})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\models\query.py", line 629, in get
+    num = len(clone)
+          ^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\models\query.py", line 366, in __len__
+    self._fetch_all()
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\models\query.py", line 1949, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\models\sql\compiler.py", line 1623, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Lenovo\Desktop\Python\Programs\Attendance System\Backend\fr\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+
+ERROR 2025-10-16 12:15:04,546 basehttp 8912 23828 "POST /admin/users/student/2/change/ HTTP/1.1" 500 206357
+INFO 2025-10-16 12:16:29,515 basehttp 8912 23828 "GET /admin/users/student/2/change/ HTTP/1.1" 200 41512
+INFO 2025-10-16 12:16:42,340 basehttp 8912 23828 "GET /admin/users/student/ HTTP/1.1" 200 22702
+INFO 2025-10-16 12:22:52,024 autoreload 20876 21992 Watching for file changes with StatReloader
+INFO 2025-10-16 12:23:54,886 basehttp 20876 7460 "GET /admin/ HTTP/1.1" 200 22790
+INFO 2025-10-16 12:25:48,069 basehttp 20876 7460 "GET /admin/users/student/ HTTP/1.1" 200 22702
+INFO 2025-10-16 12:26:26,398 basehttp 20876 7460 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-10-16 12:26:44,243 basehttp 20876 7460 "GET /admin/users/student/2/change/ HTTP/1.1" 200 41512
+INFO 2025-10-16 12:26:45,748 basehttp 20876 7460 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-10-16 12:27:22,809 basehttp 20876 7460 "POST /admin/users/student/2/change/ HTTP/1.1" 302 0
+INFO 2025-10-16 12:27:26,884 basehttp 20876 7460 "GET /admin/users/student/ HTTP/1.1" 200 22916
+INFO 2025-10-16 12:27:27,477 basehttp 20876 7460 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-10-16 12:28:40,503 basehttp 20876 7460 "GET /admin/users/admin/ HTTP/1.1" 200 17590
+INFO 2025-10-16 12:28:41,875 basehttp 20876 7460 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-10-16 12:29:00,078 basehttp 20876 7460 "GET /admin/users/admin/add/ HTTP/1.1" 200 21838
+INFO 2025-10-16 12:29:36,822 basehttp 20876 7460 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-10-16 12:29:56,319 basehttp 20876 7460 "POST /admin/logout/ HTTP/1.1" 200 3572
+INFO 2025-10-16 12:30:01,886 basehttp 20876 7460 "GET /admin/ HTTP/1.1" 302 0
+INFO 2025-10-16 12:30:01,897 basehttp 20876 7460 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4177
+INFO 2025-10-16 12:30:23,319 basehttp 20876 7460 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 4347
+INFO 2025-10-16 12:30:34,531 basehttp 20876 7460 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 4347
+INFO 2025-10-16 12:31:16,624 basehttp 20876 7460 "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2025-10-16 12:31:20,150 basehttp 20876 7460 "GET /admin/ HTTP/1.1" 200 22780
